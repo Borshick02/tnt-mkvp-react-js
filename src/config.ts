@@ -25,14 +25,14 @@ export type RouteType = {
 
 export const Routes: RoutesType = {
     // Auth: {
-    //     href: '/', // авторизация
+    //     href: '/auth', // авторизация
     //     label: 'Авторизация',
     //     Icon: null,
     //     divider: false,
     //     hide: true,
     // },
     IndexPage: {
-        href: '/dashboard', // главная - дашборд
+        href: '/', // главная - дашборд
         label: 'Главная',
         Icon: PlusIcon,
         divider: true,

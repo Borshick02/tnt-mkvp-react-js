@@ -1,6 +1,6 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Routes, listOfAuthDomains } from '../../config';
+import { Routes } from '../../config';
 import { LoadStatusType } from 'tnt-uikit-reactjs/dist/Types';
 import { useAuth } from './helpers';
 import Footer from 'components/Footer';
@@ -111,7 +111,7 @@ export default function Auth() {
             <Form onSubmit={handleSubmit} title="Добро пожаловать!">
                 {!!validated?.msg && <span className="auth__error">{validated.msg}</span>}
 
-                <Select label="Домен" id="domen" name="domen" options={listOfAuthDomains} invalid={!!validated?.domen} />
+                {/* <Select label="Домен" id="domen" name="domen" options={listOfAuthDomains} invalid={!!validated?.domen} /> */}
 
                 <Input label="Логин" id="login" name="login" invalid={!!validated?.login} />
 
