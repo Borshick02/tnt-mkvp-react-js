@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom/client';
 import { Routes, Route, BrowserRouter } from 'react-router-dom'; // https://reactrouter.com/en/main/start/concepts
 
 import { Routes as RoutesList } from './config';
-import { AuthProvider, RequireAuth } from './pages/Auth/helpers';
+// import { AuthProvider, RequireAuth } from './pages/Auth/helpers';
 
 import { Utils } from 'tnt-uikit-reactjs';
 
@@ -22,19 +22,9 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PageWrapper from './components/PageWrapper';
 
 import Error404 from './pages/Error404';
-import Auth from './pages/Auth';
+// import Auth from './pages/Auth';
 import UiKit from './pages/UiKit';
 import IndexPage from './pages/IndexPage';
-import BusinessProcesses from './pages/BusinessProcesses';
-import Services from './pages/Services';
-import Triggers from './pages/Triggers';
-import Tasks from './pages/Tasks';
-import Starts from './pages/Starts';
-import WorksTuz from './pages/WorksTuz';
-import Servers from './pages/Servers';
-import RuntimeEnvironments from './pages/RuntimeEnvironments';
-import Software from './pages/Software';
-import Users from './pages/Users';
 
 import 'tnt-uikit-reactjs/src/scss/main.scss';
 import 'tnt-uikit-reactjs/dist/tnt-uikit-reactjs.cjs.development.css';
@@ -54,108 +44,20 @@ function App() {
     return (
         <ErrorBoundary>
             <BrowserRouter basename="/">
-                <AuthProvider>
-                    <Routes>
-                        <Route path={RoutesList.Auth.href} element={<Auth />} />
+                {/* <AuthProvider> */}
+                <Routes>
+                    {/* <Route path={RoutesList.Auth.href} element={<Auth />} /> */}
 
-                        <Route element={<PageWrapper />}>
-                            <Route
-                                path={RoutesList.IndexPage.href}
-                                element={
-                                    <RequireAuth>
-                                        <IndexPage />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.BusinessProcesses.href}
-                                element={
-                                    <RequireAuth>
-                                        <BusinessProcesses />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.Services.href}
-                                element={
-                                    <RequireAuth>
-                                        <Services />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.Triggers.href}
-                                element={
-                                    <RequireAuth>
-                                        <Triggers />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.Tasks.href}
-                                element={
-                                    <RequireAuth>
-                                        <Tasks />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.Starts.href}
-                                element={
-                                    <RequireAuth>
-                                        <Starts />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.WorksTuz.href}
-                                element={
-                                    <RequireAuth>
-                                        <WorksTuz />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.Servers.href}
-                                element={
-                                    <RequireAuth>
-                                        <Servers />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.RuntimeEnvironments.href}
-                                element={
-                                    <RequireAuth>
-                                        <RuntimeEnvironments />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.Software.href}
-                                element={
-                                    <RequireAuth>
-                                        <Software />
-                                    </RequireAuth>
-                                }
-                            />
-                            <Route
-                                path={RoutesList.Users.href}
-                                element={
-                                    <RequireAuth>
-                                        <Users />
-                                    </RequireAuth>
-                                }
-                            />
+                    <Route element={<PageWrapper />}>
+                        <Route path={RoutesList.IndexPage.href} element={<IndexPage />} />
+                        <Route path={RoutesList.UiKit.href} element={<UiKit />} />
+                        <Route path="*" element={<Error404 />} />
+                    </Route>
+                </Routes>
 
-                            <Route path={RoutesList.UiKit.href} element={<UiKit />} />
-                            <Route path="*" element={<Error404 />} />
-                        </Route>
-                    </Routes>
-
-                    <Modal />
-                    <Notification />
-                </AuthProvider>
+                <Modal />
+                <Notification />
+                {/* </AuthProvider> */}
             </BrowserRouter>
         </ErrorBoundary>
     );

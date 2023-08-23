@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Routes } from '../../config';
 import { Components, Icons } from 'tnt-uikit-reactjs';
 import MenuNavigation from '../MenuNavigation';
-import MenuUser from '../MenuUser';
+// import MenuUser from '../MenuUser';
 
 import './index.scss';
 
@@ -26,7 +26,7 @@ export default function PageWrapper() {
                             <PlusIcon /> Добавить
                         </Button>
                     )}
-                    <MenuUser style={{ marginLeft: 'auto' }} />
+                    {/* <MenuUser style={{ marginLeft: 'auto' }} /> */}
                 </div>
                 <Outlet context={setHeaderButton} />
             </div>
