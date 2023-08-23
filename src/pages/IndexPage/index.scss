@@ -1,0 +1,150 @@
+.home {
+    &__menu {
+        display: flex;
+        margin-bottom: 3rem;
+
+        &__container {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: var(--font-size-normal);
+            font-weight: bold;
+            white-space: nowrap;
+            color: var(--text-secondary);
+            cursor: pointer;
+
+            &:hover {
+                color: var(--text-primary);
+            }
+
+            &--active {
+                color: var(--text-primary);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        border-radius: 1rem;
+        gap: 5rem;
+        background-color: var(--background-card-primary);
+
+        &__container {
+            display: flex;
+            overflow-x: auto;
+        }
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+
+        &__menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+
+            h4 {
+                font-size: var(--font-size-medium);
+            }
+
+            a {
+                color: var(--primary-default);
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+        &__filter {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            &__label {
+                color: var(--text-secondary);
+            }
+        }
+    }
+
+    &__graph {
+        display: flex;
+        gap: 2rem;
+
+        &__1 {
+            width: 25%;
+        }
+
+        &__2 {
+            width: 45%;
+        }
+
+        &__3 {
+            width: 45%;
+        }
+    }
+
+    &__process {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+            font-size: var(--font-size-small);
+            margin-bottom: 1rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            padding: 1rem;
+
+            tr {
+                font-size: var(--font-size-small);
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--text-secondary);
+                }
+            }
+
+            th {
+                text-align: center;
+                padding: 1rem;
+
+                &:first-of-type {
+                    text-align: start;
+                }
+            }
+
+            td:first-of-type {
+                text-align: start;
+            }
+        }
+
+        &__cell-title {
+            &--sortable {
+                cursor: pointer;
+            }
+        }
+
+        &__cell {
+            text-align: end;
+            padding: 1rem;
+
+            &--red {
+                color: var(--status-red-danger);
+            }
+        }
+    }
+}

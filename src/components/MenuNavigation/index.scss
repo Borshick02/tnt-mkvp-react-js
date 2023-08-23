@@ -1,0 +1,45 @@
+.menu-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24.5rem;
+    background-color: var(--background-card-primary);
+    border-radius: 0 3rem 3rem 0;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        width: 22.5rem;
+        gap: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        background-color: var(--background-card-primary);
+        text-decoration: none;
+        cursor: pointer;
+
+        &__img {
+            width: 2.2rem;
+            color: var(--primary-default);
+        }
+
+        &--active {
+            background-color: var(--status-blue-surface);
+        }
+
+        &__label {
+            font-size: var(--font-size-default);
+            color: var(--text-primary);
+        }
+
+        &:hover {
+            background-color: var(--background-page-primary);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.menu-user {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &__info {
+        display: flex;
+        margin-left: 2rem;
+        gap: 1rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            white-space: nowrap;
+        }
+    }
+
+    &__settings {
+        display: flex;
+        width: 100%;
+        color: var(--primary-default);
+        cursor: pointer;
+    }
+}
