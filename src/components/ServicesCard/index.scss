@@ -1,0 +1,25 @@
+.services-card {
+  width: 27rem;
+  max-width: 100%;
+  background: var(--background-card-primary);
+  border-radius: 1rem;
+  display: flex;
+  padding: 1.6rem;
+  align-items: center;
+
+  &__icon {
+    margin: 0 1.2rem 0 0;
+    padding: 1rem;
+    background: var(--background-page-primary);
+    border-radius: 1rem;
+    display: flex;
+  }
+
+  &__name {
+    font-size: var(--font-size-normal);
+  }
+}
+
+svg {
+  display: block;
+}

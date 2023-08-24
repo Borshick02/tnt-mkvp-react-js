@@ -21,6 +21,8 @@ export type RouteType = {
     divider: boolean;
     longname?: string;
     hide?: boolean;
+    background?: boolean;
+    marginTop?: boolean;
 };
 
 export const Routes: RoutesType = {
@@ -33,14 +35,73 @@ export const Routes: RoutesType = {
     // },
     IndexPage: {
         href: '/', // главная - дашборд
-        label: 'Главная',
+        label: 'Компания',
         Icon: HomeIcon,
-        divider: true,
+        divider: false,
+        background: false,
+    },
+    EmployeeDirectory: {
+        href: '', // главная - дашборд
+        label: 'Справочник работников',
+        Icon: HomeIcon,
+        divider: false,
+        background: false,
+    },
+    Employee: {
+        href: '', // главная - дашборд
+        label: 'Работнику',
+        Icon: HomeIcon,
+        divider: false,
+        background: false,
+    },
+    TasksAndProjects: {
+        href: '', // главная - дашборд
+        label: 'Задачи и проекты',
+        Icon: HomeIcon,
+        divider: false,
+        background: false,
+    },
+    MediaCenter: {
+        href: '', // главная - дашборд
+        label: 'Медиацентр',
+        Icon: HomeIcon,
+        divider: false,
+        background: false,
+    },
+    Services: {
+        href: '', // главная - дашборд
+        label: 'Сервисы',
+        Icon: HomeIcon,
+        divider: false,
+        background: false,
+    },
+    KIS: {
+        href: '', // главная - дашборд
+        label: 'КИС',
+        Icon: HomeIcon,
+        divider: false,
+        background: true,
+        marginTop: true,
+    },
+    Subsystems: {
+        href: '', // главная - дашборд
+        label: 'Подсистемы',
+        Icon: HomeIcon,
+        divider: false,
+        background: true,
+    },
+    Support: {
+        href: '', // главная - дашборд
+        label: 'Поддержка',
+        Icon: HomeIcon,
+        divider: false,
+        background: true,
     },
     UiKit: {
         href: '/ui-kit',
         label: 'UI Kit',
         Icon: null,
         divider: false,
+        background: false,
     },
 };
