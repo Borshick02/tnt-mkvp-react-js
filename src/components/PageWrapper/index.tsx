@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Routes } from '../../config';
-import { Button, Icons } from 'tnt-uikit-reactjs';
+import { Button } from 'tnt-uikit-reactjs/src/components';
+import { CloseMdIcon } from 'tnt-uikit-reactjs/src/icons';
 import MenuNavigation from '../MenuNavigation';
 // import MenuUser from '../MenuUser';
 
@@ -11,7 +12,6 @@ export default function PageWrapper() {
     const [headerButton, setHeaderButton] = useState<null | ((e: any) => void)>(null);
     const { pathname } = useLocation();
     const title = Object.values(Routes).find((Route) => Route.href === pathname);
-    const { CloseMdIcon } = Icons;
     // const [RoutesList, SetRoutesList] = useState(Routes);
 
     return (

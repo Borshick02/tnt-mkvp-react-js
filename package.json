@@ -3,50 +3,64 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@testing-library/jest-dom": "^5.17.0",
-        "@testing-library/react": "^13.4.0",
-        "@testing-library/user-event": "^13.5.0",
-        "@types/jest": "^27.5.2",
-        "@types/node": "^16.18.39",
-        "@types/react": "^18.2.18",
-        "@types/react-dom": "^18.2.7",
-        "apexcharts": "^3.41.1",
-        "axios": "^1.4.0",
-        "jquery": "^3.7.0",
-        "js-storage": "^1.1.0",
-        "lodash": "^4.17.21",
-        "moment": "^2.29.4",
-        "react": "^18.2.0",
-        "react-apexcharts": "^1.4.1",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.14.2",
+        "@testing-library/jest-dom": "5.17.0",
+        "@testing-library/react": "13.4.0",
+        "@testing-library/user-event": "13.5.0",
+        "@types/jest": "27.5.2",
+        "@types/node": "16.18.39",
+        "@types/react": "18.2.18",
+        "@types/react-dom": "18.2.7",
+        "apexcharts": "3.41.1",
+        "axios": "1.4.0",
+        "jquery": "3.7.0",
+        "js-storage": "1.1.0",
+        "lodash": "4.17.21",
+        "moment": "2.29.4",
+        "react": "18.2.0",
+        "react-apexcharts": "1.4.1",
+        "react-dom": "18.2.0",
+        "react-router-dom": "6.14.2",
         "react-scripts": "5.0.1",
-        "sass": "^1.64.2",
-        "typescript": "^4.9.5",
+        "sass": "1.64.2",
         "tnt-uikit-reactjs": "github:valery-lavrik/tnt-uikit-reactjs",
-        "web-vitals": "^2.1.4"
+        "typescript": "4.9.5",
+        "web-vitals": "2.1.4"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
+        "start": "craco start",
+        "build": "set \"GENERATE_SOURCEMAP=false\" && craco build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {
-        "extends": ["react-app", "react-app/jest", "prettier"],
+        "extends": [
+            "react-app",
+            "react-app/jest",
+            "prettier"
+        ],
         "rules": {
             "react-hooks/exhaustive-deps": 0
         }
     },
     "browserslist": {
-        "production": [">0.2%", "not dead", "not op_mini all"],
-        "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     },
     "devDependencies": {
-        "@types/jquery": "^3.5.16",
-        "@types/lodash": "^4.14.196",
-        "@types/react-router-dom": "^5.3.3",
-        "eslint-config-prettier": "^9.0.0",
+        "@craco/craco": "^7.1.0",
+        "@types/jquery": "3.5.16",
+        "@types/lodash": "4.14.196",
+        "@types/react-router-dom": "5.3.3",
+        "craco-babel-loader": "^1.0.4",
+        "eslint-config-prettier": "9.0.0",
         "prettier": "3.0.1"
     }
 }

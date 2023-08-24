@@ -1,20 +1,17 @@
 import React from 'react';
-import { useLocation, Navigate } from "react-router-dom";
+import { useLocation, Navigate } from 'react-router-dom';
 import { Routes } from './../../config';
 import { authRequest, restoreAuth } from '../../requests';
 import { UserType } from '../../Types';
-import { Utils } from 'tnt-uikit-reactjs';
-const { getCookie, setCookie } = Utils;
+import { getCookie, setCookie } from 'tnt-uikit-reactjs/src/utils';
 
 type AuthProviderType = {
-    user: UserType | null,
-    signin: (login: string, pass: string, remember: boolean, domen: string, success: () => void, error: (e: any) => void) => void,
-    signout: (callback?: () => void) => void,
-    checkAuth: (success: () => void, error: (e: any) => void) => void,
-    isAuth: () => boolean,
-}
-
-
+    user: UserType | null;
+    signin: (login: string, pass: string, remember: boolean, domen: string, success: () => void, error: (e: any) => void) => void;
+    signout: (callback?: () => void) => void;
+    checkAuth: (success: () => void, error: (e: any) => void) => void;
+    isAuth: () => boolean;
+};
 
 export const AuthKey = 'AuthKey_1';
 
@@ -30,8 +27,6 @@ export function useAuth() {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
     let [user, setUser] = React.useState<null | UserType>(null);
 
-
-
     // восстановить авторизацию при загрузке страницы
     let checkAuth = (success: () => void, error: (e: any) => void): void => {
         let Bearer: string = getCookie(AuthKey, '') as string;
@@ -41,13 +36,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             return;
         }
 
-        restoreAuth(Bearer).then((user: UserType) => {
-            setUser(user);
-            success();
-        }).catch(error);
-    }
-
-
+        restoreAuth(Bearer)
+            .then((user: UserType) => {
+                setUser(user);
+                success();
+            })
+            .catch(error);
+    };
 
     let signin = async (login: string, pass: string, remember: boolean, domen: string, success: () => void, error: (e: any) => void) => {
         authRequest({ login, pass })
@@ -63,8 +58,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             .catch(error);
     };
 
-
-
     let signout = (callback?: () => void) => {
         setUser(null);
         setCookie(AuthKey, '', 0);
@@ -74,16 +67,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
     };
 
-
-
-    let isAuth = () => !!user?.bearer;;
+    let isAuth = () => !!user?.bearer;
 
     let value = { user, signin, signout, checkAuth, isAuth };
 
     return <AuthContext.Provider value={value}> {children} </AuthContext.Provider>;
 }
-
-
 
 // Компанента для оборачивания страниц на которых обязательна авторизация
 export function RequireAuth({ children }: { children: JSX.Element }) {
