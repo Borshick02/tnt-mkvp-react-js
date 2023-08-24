@@ -15,9 +15,9 @@
 
     &__item {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
-        gap: 1rem;
+        gap: 1.25rem;
         border-radius: 1rem;
         padding: 1.5rem;
         background-color: var(--background-card-primary);
@@ -25,8 +25,10 @@
         cursor: pointer;
 
         &__img {
-            width: 2.2rem;
-            color: var(--primary-default);
+            svg {
+                transform: scale(130%);
+                color: var(--primary-default);
+            }
         }
 
         &--active {

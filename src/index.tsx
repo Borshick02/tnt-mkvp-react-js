@@ -47,9 +47,12 @@ function App() {
                 {/* <AuthProvider> */}
                 <Routes>
                     {/* <Route path={RoutesList.Auth.href} element={<Auth />} /> */}
-
                     <Route element={<PageWrapper />}>
-                        <Route path={RoutesList.IndexPage.href} element={<IndexPage />} />
+                        <Route
+                            path={RoutesList.IndexPage.href}
+                            element={<IndexPage />}
+                        />
+
                         <Route path={RoutesList.UiKit.href} element={<UiKit />} />
                         <Route path="*" element={<Error404 />} />
                     </Route>

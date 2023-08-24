@@ -21,4 +21,11 @@
             white-space: nowrap;
         }
     }
+
+    &__button {
+        &__icon {
+            transform: rotate(45deg);
+            color: var(--color-primary);
+        }
+    }
 }

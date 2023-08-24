@@ -37,26 +37,5 @@ export const authRequest = (props: AuthProthType): Promise<UserType> => {
                 reject(null);
             }
         }, 1000);
-
-        // let auth = null;
-        // try {
-        // 	auth = await fetch('https://4543.ru/keys.php', {
-        // 		method: "post",
-        // 		body: JSON.stringify({
-        // 			login: props.login,
-        // 			pass: props.pass,
-        // 		})
-        // 	});
-
-        // 	auth = await auth.json();
-        // } catch (err) {
-        // 	return reject(err);
-        // }
-
-        // if (!auth?.bearer) {
-        // 	return reject('ERROR');
-        // }
-
-        // resolve(auth);
     });
 };

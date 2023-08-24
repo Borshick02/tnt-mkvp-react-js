@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Routes } from '../../config';
-import { Components, Icons } from 'tnt-uikit-reactjs';
+import { Button, Icons } from 'tnt-uikit-reactjs';
 import MenuNavigation from '../MenuNavigation';
 // import MenuUser from '../MenuUser';
 
@@ -11,8 +11,7 @@ export default function PageWrapper() {
     const [headerButton, setHeaderButton] = useState<null | ((e: any) => void)>(null);
     const { pathname } = useLocation();
     const title = Object.values(Routes).find((Route) => Route.href === pathname);
-    const { Button } = Components;
-    const { PlusIcon } = Icons;
+    const { CloseMdIcon } = Icons;
     // const [RoutesList, SetRoutesList] = useState(Routes);
 
     return (
@@ -23,7 +22,7 @@ export default function PageWrapper() {
                     <h2>{title?.longname ? title?.longname : title?.longname ? title?.longname : title?.label}</h2>
                     {!!headerButton && (
                         <Button style={{ marginLeft: '2rem' }} secondary onClick={(e) => headerButton(e)}>
-                            <PlusIcon /> Добавить
+                            <CloseMdIcon className="page-wrapper__button__icon" /> Добавить
                         </Button>
                     )}
                     {/* <MenuUser style={{ marginLeft: 'auto' }} /> */}

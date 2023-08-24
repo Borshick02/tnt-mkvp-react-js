@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../pages/Auth/helpers';
-import { Components, Icons } from 'tnt-uikit-reactjs';
+import { Divider, Icons } from 'tnt-uikit-reactjs';
 
 import './index.scss';
 
@@ -11,8 +11,8 @@ interface Props {
 const MenuUser = ({ style = {} }: Props) => {
     const auth = useAuth();
     let navigate = useNavigate();
-    const { Divider } = Components;
-    const { PlusIcon } = Icons;
+    const { SettingsIcon, LogOutIcon } = Icons;
+
 
     return (
         <div className="menu-user" style={style}>
@@ -29,7 +29,7 @@ const MenuUser = ({ style = {} }: Props) => {
                                 navigate('/', { replace: true });
                             }}
                         >
-                            <PlusIcon />
+                            <LogOutIcon />
                         </a>
                     </div>
                     <Divider
@@ -40,7 +40,7 @@ const MenuUser = ({ style = {} }: Props) => {
                         }}
                     />
                     <div className="menu-user__settings">
-                        <PlusIcon />
+                        <SettingsIcon />
                     </div>
                 </>
             )}

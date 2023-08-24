@@ -17,12 +17,19 @@
         span {
             white-space: nowrap;
         }
+
+        svg {
+            color: var(--primary-default);
+        }
     }
 
     &__settings {
         display: flex;
         width: 100%;
-        color: var(--primary-default);
         cursor: pointer;
+
+        svg {
+            color: var(--primary-default);
+        }
     }
 }

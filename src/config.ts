@@ -1,5 +1,5 @@
 import { Icons } from 'tnt-uikit-reactjs';
-const { PlusIcon } = Icons;
+const { HomeIcon } = Icons;
 
 // const BaseApiServer = 'https://transneft.ru/'
 const BaseApiServer = 'https://lavrik.site/mkvp/';
@@ -34,7 +34,7 @@ export const Routes: RoutesType = {
     IndexPage: {
         href: '/', // главная - дашборд
         label: 'Главная',
-        Icon: PlusIcon,
+        Icon: HomeIcon,
         divider: true,
     },
     UiKit: {

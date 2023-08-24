@@ -5,7 +5,7 @@ import { LoadStatusType } from 'tnt-uikit-reactjs/dist/Types';
 import { useAuth } from './helpers';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
-import { Components, Utils } from 'tnt-uikit-reactjs';
+import { Utils, Form, Divider, Button, Input, FullScrenLoad } from 'tnt-uikit-reactjs';
 
 import './index.scss';
 
@@ -19,7 +19,6 @@ type ValidateType = {
 export default function Auth() {
     const [status, setStatus] = useState<LoadStatusType>('load');
     const [validated, setValidated] = useState<ValidateType | null>(null);
-    const { Select, Divider, Button, Input, FullScrenLoad, Form } = Components;
     const { isValid } = Utils;
 
     let auth = useAuth();
@@ -110,8 +109,6 @@ export default function Auth() {
 
             <Form onSubmit={handleSubmit} title="Добро пожаловать!">
                 {!!validated?.msg && <span className="auth__error">{validated.msg}</span>}
-
-                {/* <Select label="Домен" id="domen" name="domen" options={listOfAuthDomains} invalid={!!validated?.domen} /> */}
 
                 <Input label="Логин" id="login" name="login" invalid={!!validated?.login} />
 
