@@ -1,11 +1,15 @@
 import './index.scss';
 
+import CardNews from 'components/CardNews';
+import ServicesCard from 'components/ServicesCard';
+
 
 export default function IndexPage() {
 
     return (
         <div className="home">
-            Контент гл страницы
+            <CardNews />
+            <ServicesCard />
         </div>
     );
 }

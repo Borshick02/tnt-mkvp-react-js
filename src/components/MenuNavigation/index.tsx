@@ -23,6 +23,11 @@ const MenuNavigation = ({ Routes }: { Routes: RoutesType }) => {
                             <Link
                                 className={`menu-navigation__item ${Route.href === pathname ? 'menu-navigation__item--active' : ''}`}
                                 to={Route.href}
+                                style={{
+                                    backgroundColor: !!Route.background ? '#EBF2FF' : '',
+                                    margin: !!Route.background ? '0 0 .4rem' : '',
+                                    marginTop: !!Route.marginTop ? '26rem' : '',
+                                }}
                             >
                                 {!!Route.Icon && (
                                     <div className="menu-navigation__item__img">
