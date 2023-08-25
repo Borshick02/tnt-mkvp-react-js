@@ -1,0 +1,10 @@
+.media-center {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        img {
+            padding: 2rem 4rem;
+        }
+    }
+}

@@ -12,7 +12,7 @@ const MenuNavigation = ({ Routes }: { Routes: RoutesType }) => {
 
     return (
         <div className="menu-navigation">
-            <Header style={{ margin: '3rem 0' }} />
+            <Header style={{ margin: '2rem 0' }} />
             {Object.keys(Routes).map((RouteKey) => {
                 const Route = Routes[RouteKey];
                 if (Route.hide) return null;

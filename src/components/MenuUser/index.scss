@@ -1,35 +1,40 @@
 .menu-user {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+
+    &__notification {
+        position: relative;
+        margin-left: 3rem;
+    }
 
     &__info {
         display: flex;
-        margin-left: 2rem;
-        gap: 1rem;
-
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        align-items: center;
+        gap: 1.25rem;
+        cursor: pointer;
 
         span {
             white-space: nowrap;
         }
 
-        svg {
-            color: var(--primary-default);
+        &__icon {
+            display: flex;
+            margin-left: 3rem;
         }
     }
 
-    &__settings {
+    &__content {
         display: flex;
-        width: 100%;
-        cursor: pointer;
+        flex-direction: column;
 
-        svg {
-            color: var(--primary-default);
+        &__item {
+            padding: 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--primary-light-default);
+            }
         }
     }
 }

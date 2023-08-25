@@ -25,11 +25,21 @@ import Error404 from './pages/Error404';
 // import Auth from './pages/Auth';
 import UiKit from './pages/UiKit';
 import IndexPage from './pages/IndexPage';
+import MediaCenter from 'pages/MediaCenter';
+import Employee from 'pages/Employee';
+import EmployeeDirectory from 'pages/EmployeeDirectory';
+import Kis from 'pages/Kis';
+import Services from 'pages/Services';
+import Subsystems from 'pages/Subsystems';
+import TasksAndProjects from 'pages/TasksAndProjects';
+import Support from 'pages/Support';
+import Info from 'pages/Info';
 
 import 'tnt-uikit-reactjs/src/scss/main.scss';
 
 import moment from 'moment';
 import 'moment/locale/ru';
+
 moment.locale('ru');
 
 // не давать браузеру самому выставлять скролл при перезагрузке
@@ -46,6 +56,16 @@ function App() {
                     {/* <Route path={RoutesList.Auth.href} element={<Auth />} /> */}
                     <Route element={<PageWrapper />}>
                         <Route path={RoutesList.IndexPage.href} element={<IndexPage />} />
+                        <Route path={RoutesList.Employee.href} element={<Employee />} />
+                        <Route path={RoutesList.EmployeeDirectory.href} element={<EmployeeDirectory />} />
+                        <Route path={RoutesList.KIS.href} element={<Kis />} />
+                        <Route path={RoutesList.MediaCenter.href} element={<MediaCenter />} />
+                        <Route path={RoutesList.Services.href} element={<Services />} />
+                        <Route path={RoutesList.Subsystems.href} element={<Subsystems />} />
+                        <Route path={RoutesList.Support.href} element={<Support />} />
+                        <Route path={RoutesList.TasksAndProjects.href} element={<TasksAndProjects />} />
+                        {/* Do route const not in list? */}
+                        <Route path={'/info'} element={<Info />} />
 
                         <Route path={RoutesList.UiKit.href} element={<UiKit />} />
                         <Route path="*" element={<Error404 />} />
