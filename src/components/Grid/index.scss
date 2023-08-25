@@ -8,6 +8,10 @@
         grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     }
 
+    &--half {
+        grid-template-columns: 1fr 1fr;
+    }
+
     &--inline {
         grid-template-columns: 1fr;
     }
