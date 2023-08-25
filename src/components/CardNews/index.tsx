@@ -7,7 +7,7 @@ import imgCard from '../../assets/images/CardNews.png';
 // }
 
 const CardNews = () => {
-    const cardDesc = document.querySelectorAll('.card-news__desc');
+
     const handleClick = (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
         const target = event.target as HTMLParagraphElement;
         target.classList.toggle('card-news-active');

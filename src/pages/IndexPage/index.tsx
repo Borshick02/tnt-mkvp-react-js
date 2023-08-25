@@ -2,6 +2,7 @@ import './index.scss';
 
 import CardNews from 'components/CardNews';
 import ServicesCard from 'components/ServicesCard';
+import Slider from 'components/Slider';
 
 
 export default function IndexPage() {
@@ -10,6 +11,7 @@ export default function IndexPage() {
         <div className="home">
             <CardNews />
             <ServicesCard />
+            <Slider />
         </div>
     );
 }

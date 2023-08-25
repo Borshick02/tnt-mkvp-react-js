@@ -1,5 +1,4 @@
-import { Icons } from 'tnt-uikit-reactjs';
-const { HomeIcon } = Icons;
+import { HomeIcon } from 'tnt-uikit-reactjs/src/icons';
 
 // const BaseApiServer = 'https://transneft.ru/'
 const BaseApiServer = 'https://lavrik.site/mkvp/';

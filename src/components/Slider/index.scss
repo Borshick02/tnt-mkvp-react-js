@@ -1,0 +1,18 @@
+.slider {
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 44.8rem;
+    max-width: 100%;
+  }
+
+  &__img {
+    width: 70rem;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+}

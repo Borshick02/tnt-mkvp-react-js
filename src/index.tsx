@@ -16,7 +16,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'; // https://reac
 import { Routes as RoutesList } from './config';
 // import { AuthProvider, RequireAuth } from './pages/Auth/helpers';
 
-import { Utils } from 'tnt-uikit-reactjs';
+import { Modal, Notification } from 'tnt-uikit-reactjs/src/utils';
 
 import ErrorBoundary from './components/ErrorBoundary';
 import PageWrapper from './components/PageWrapper';
@@ -27,7 +27,6 @@ import UiKit from './pages/UiKit';
 import IndexPage from './pages/IndexPage';
 
 import 'tnt-uikit-reactjs/src/scss/main.scss';
-import 'tnt-uikit-reactjs/dist/tnt-uikit-reactjs.cjs.development.css';
 
 import moment from 'moment';
 import 'moment/locale/ru';
@@ -39,8 +38,6 @@ if (window.history?.scrollRestoration) {
 }
 
 function App() {
-    const { Modal, Notification } = Utils;
-
     return (
         <ErrorBoundary>
             <BrowserRouter basename="/">
@@ -48,10 +45,7 @@ function App() {
                 <Routes>
                     {/* <Route path={RoutesList.Auth.href} element={<Auth />} /> */}
                     <Route element={<PageWrapper />}>
-                        <Route
-                            path={RoutesList.IndexPage.href}
-                            element={<IndexPage />}
-                        />
+                        <Route path={RoutesList.IndexPage.href} element={<IndexPage />} />
 
                         <Route path={RoutesList.UiKit.href} element={<UiKit />} />
                         <Route path="*" element={<Error404 />} />

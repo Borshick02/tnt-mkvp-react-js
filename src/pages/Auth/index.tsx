@@ -1,11 +1,12 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Routes } from '../../config';
-import { LoadStatusType } from 'tnt-uikit-reactjs/dist/Types';
+import { LoadStatusType } from 'tnt-uikit-reactjs/src/Types';
 import { useAuth } from './helpers';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
-import { Utils, Form, Divider, Button, Input, FullScrenLoad } from 'tnt-uikit-reactjs';
+import { Form, Divider, Button, Input, FullScrenLoad } from 'tnt-uikit-reactjs/src/components';
+import { isValid } from 'tnt-uikit-reactjs/src/utils';
 
 import './index.scss';
 
@@ -19,7 +20,6 @@ type ValidateType = {
 export default function Auth() {
     const [status, setStatus] = useState<LoadStatusType>('load');
     const [validated, setValidated] = useState<ValidateType | null>(null);
-    const { isValid } = Utils;
 
     let auth = useAuth();
     let navigate = useNavigate();

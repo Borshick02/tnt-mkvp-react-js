@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../pages/Auth/helpers';
-import { Divider, Icons } from 'tnt-uikit-reactjs';
+import { Divider } from 'tnt-uikit-reactjs/src/components';
+import { SettingsIcon, LogOutIcon } from 'tnt-uikit-reactjs/src/icons';
 
 import './index.scss';
 
@@ -11,8 +12,6 @@ interface Props {
 const MenuUser = ({ style = {} }: Props) => {
     const auth = useAuth();
     let navigate = useNavigate();
-    const { SettingsIcon, LogOutIcon } = Icons;
-
 
     return (
         <div className="menu-user" style={style}>
