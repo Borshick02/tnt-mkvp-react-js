@@ -7,6 +7,7 @@ import OifIcon from '../../assets/icons/oif.svg';
 import Kis from '../../assets/icons/kis.svg';
 import WebTutor from '../../assets/icons/web-tutor.svg';
 import Scud from '../../assets/icons/scud.svg';
+
 const ServicesCard = () => {
     return (
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
