@@ -1,0 +1,18 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-card-primary);
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+    color: var(--text-primary);
+
+    &__title {
+        margin-top: auto;
+        font-size: var(--font-size-default);
+    }
+
+    &__subtitle {
+        color: var(--text-secondary);
+        font-size: var(--font-size-smallest);
+    }
+}

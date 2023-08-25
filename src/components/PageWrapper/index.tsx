@@ -1,33 +1,40 @@
-import { useState } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Routes } from '../../config';
-import { Button } from 'tnt-uikit-reactjs/src/components';
-import { CloseMdIcon } from 'tnt-uikit-reactjs/src/icons';
+import { SearchMagnifyingGlassIcon } from 'tnt-uikit-reactjs/src/icons';
+import { Divider } from 'tnt-uikit-reactjs/src/components';
+
 import MenuNavigation from '../MenuNavigation';
-// import MenuUser from '../MenuUser';
+import MenuUser from '../MenuUser';
 
 import './index.scss';
 
 export default function PageWrapper() {
-    const [headerButton, setHeaderButton] = useState<null | ((e: any) => void)>(null);
-    const { pathname } = useLocation();
-    const title = Object.values(Routes).find((Route) => Route.href === pathname);
-    // const [RoutesList, SetRoutesList] = useState(Routes);
-
     return (
         <div className="page-wrapper">
             <MenuNavigation Routes={Routes} />
             <div className="page-wrapper__content">
                 <div className="page-wrapper__head">
-                    <h2>{title?.longname ? title?.longname : title?.longname ? title?.longname : title?.label}</h2>
-                    {!!headerButton && (
-                        <Button style={{ marginLeft: '2rem' }} secondary onClick={(e) => headerButton(e)}>
-                            <CloseMdIcon className="page-wrapper__button__icon" /> Добавить
-                        </Button>
-                    )}
-                    {/* <MenuUser style={{ marginLeft: 'auto' }} /> */}
+                    <div className="page-wrapper__search">
+                        <SearchMagnifyingGlassIcon className="page-wrapper__search__icon" />
+                        <input
+                            //onChange={(e) => {
+                            //    if (e.target.value.length >= minSearchSize) {
+                            //        onSearchChangeDebounced(e.target.value);
+                            //    }
+                            //}}
+                            placeholder="Поиск"
+                            type="text"
+                        />
+                        <Divider style={{ height: '75%' }} vertical />
+                        <select>
+                            <option value="1">По порталу</option>
+                            <option value="2">По сайту</option>
+                            <option value="3">По еще кому-то</option>
+                        </select>
+                    </div>
+                    <MenuUser style={{ marginLeft: 'auto' }} />
                 </div>
-                <Outlet context={setHeaderButton} />
+                <Outlet />
             </div>
         </div>
     );

@@ -32,7 +32,8 @@
         "start": "craco start",
         "build": "set \"GENERATE_SOURCEMAP=false\" && craco build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "kit-update": "rm -rf node_modules/tnt-uikit-reactjs/ && rm package-lock.json && npm i"
     },
     "eslintConfig": {
         "extends": [
