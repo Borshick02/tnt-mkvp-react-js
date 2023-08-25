@@ -40,42 +40,42 @@ export const Routes: RoutesType = {
         background: false,
     },
     EmployeeDirectory: {
-        href: '/something', // главная - дашборд
+        href: '/employee-directory', // главная - дашборд
         label: 'Справочник работников',
         Icon: HomeIcon,
         divider: false,
         background: false,
     },
     Employee: {
-        href: '/something2', // главная - дашборд
+        href: '/employee', // главная - дашборд
         label: 'Работнику',
         Icon: HomeIcon,
         divider: false,
         background: false,
     },
     TasksAndProjects: {
-        href: '/something3', // главная - дашборд
+        href: '/tasks-and-projects', // главная - дашборд
         label: 'Задачи и проекты',
         Icon: HomeIcon,
         divider: false,
         background: false,
     },
     MediaCenter: {
-        href: '/something4', // главная - дашборд
+        href: '/media-center', // главная - дашборд
         label: 'Медиацентр',
         Icon: HomeIcon,
         divider: false,
         background: false,
     },
     Services: {
-        href: '/something5', // главная - дашборд
+        href: '/services', // главная - дашборд
         label: 'Сервисы',
         Icon: HomeIcon,
         divider: false,
         background: false,
     },
     KIS: {
-        href: '/something6', // главная - дашборд
+        href: '/kis', // главная - дашборд
         label: 'КИС',
         Icon: HomeIcon,
         divider: false,
@@ -83,14 +83,14 @@ export const Routes: RoutesType = {
         marginTop: true,
     },
     Subsystems: {
-        href: '/something7', // главная - дашборд
+        href: '/subsystems', // главная - дашборд
         label: 'Подсистемы',
         Icon: HomeIcon,
         divider: false,
         background: true,
     },
     Support: {
-        href: '/something8', // главная - дашборд
+        href: '/support', // главная - дашборд
         label: 'Поддержка',
         Icon: HomeIcon,
         divider: false,

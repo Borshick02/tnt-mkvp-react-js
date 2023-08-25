@@ -1,5 +1,7 @@
-import { Badge } from 'tnt-uikit-reactjs/src/components';
+import { Link } from 'react-router-dom';
+import { Badge, DropDown } from 'tnt-uikit-reactjs/src/components';
 import { SettingsIcon, CaretDownMdIcon } from 'tnt-uikit-reactjs/src/icons';
+import avatar from '../../assets/images/avatar.png';
 
 import './index.scss';
 
@@ -33,14 +35,26 @@ const MenuUser = ({ style = {} }: Props) => {
                     </Badge>
                     <SettingsIcon />
                 </div>
-                <div className="menu-user__info">
-                    {/*<span>{auth?.user?.fio}</span>*/}
-                    <small></small>
-                    <span>Иван Лавров</span>
-                    <div className="menu-user__settings">
-                        <CaretDownMdIcon />
-                    </div>
-                </div>
+                <DropDown
+                    Component={({ close }) => (
+                        <div className="menu-user__content">
+                            <span className="menu-user__content__item">Контент 1</span>
+                            <span className="menu-user__content__item">Контент 2</span>
+                            <Link to="/info" className="menu-user__content__item">
+                                Ссылка на страницу основная информация
+                            </Link>
+                        </div>
+                    )}
+                    Button={() => (
+                        <div className="menu-user__info">
+                            <img src={avatar} alt="avatar" />
+                            <span>Иван Лавров</span>
+                            <div className="menu-user__info__icon">
+                                <CaretDownMdIcon />
+                            </div>
+                        </div>
+                    )}
+                />
             </>
             {/*)}*/}
         </div>
