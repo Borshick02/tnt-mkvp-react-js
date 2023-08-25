@@ -10,7 +10,7 @@ export default function Error404(): JSX.Element {
     return (
         <div className="error-404">
             <div className="error-404__content">
-                <Header large title={false} />
+                <Header />
                 <h2>Страница не найдена!</h2>
                 <Button>
                     <Link to="/">На главную страницу</Link>

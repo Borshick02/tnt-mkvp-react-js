@@ -1,7 +1,5 @@
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../pages/Auth/helpers';
-import { Divider } from 'tnt-uikit-reactjs/src/components';
-import { SettingsIcon, LogOutIcon } from 'tnt-uikit-reactjs/src/icons';
+import { Badge } from 'tnt-uikit-reactjs/src/components';
+import { SettingsIcon, CaretDownMdIcon } from 'tnt-uikit-reactjs/src/icons';
 
 import './index.scss';
 
@@ -10,39 +8,41 @@ interface Props {
 }
 
 const MenuUser = ({ style = {} }: Props) => {
-    const auth = useAuth();
-    let navigate = useNavigate();
+    //const auth = useAuth();
 
     return (
         <div className="menu-user" style={style}>
-            {!!auth?.isAuth() && (
-                <>
-                    <div className="menu-user__info">
-                        <span>{auth?.user?.fio}</span>
-                        <a
-                            href="/"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                auth?.signout();
-
-                                navigate('/', { replace: true });
-                            }}
-                        >
-                            <LogOutIcon />
-                        </a>
-                    </div>
-                    <Divider
-                        vertical
+            {/*{!!auth?.isAuth() && (*/}
+            <>
+                <div className="menu-user__notification">
+                    <Badge
                         style={{
-                            height: '50%',
-                            margin: '0 0.5rem',
+                            position: 'absolute',
+                            top: '-1.75rem',
+                            left: '-1.25rem',
+                            color: 'white',
+                            backgroundColor: 'red',
+                            borderRadius: '2rem',
+                            width: '2.5rem',
+                            fontSize: '1.2rem',
+                            padding: '0rem',
                         }}
-                    />
+                        status="error"
+                    >
+                        8
+                    </Badge>
+                    <SettingsIcon />
+                </div>
+                <div className="menu-user__info">
+                    {/*<span>{auth?.user?.fio}</span>*/}
+                    <small></small>
+                    <span>Иван Лавров</span>
                     <div className="menu-user__settings">
-                        <SettingsIcon />
+                        <CaretDownMdIcon />
                     </div>
-                </>
-            )}
+                </div>
+            </>
+            {/*)}*/}
         </div>
     );
 };

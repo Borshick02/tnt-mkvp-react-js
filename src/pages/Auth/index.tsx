@@ -100,7 +100,6 @@ export default function Auth() {
             {status === 'load' && <FullScrenLoad />}
 
             <Header
-                subtitle
                 style={{
                     marginTop: 'auto',
                     marginBottom: '5rem',

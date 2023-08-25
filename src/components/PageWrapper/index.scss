@@ -7,7 +7,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 2rem;
+        padding: 2rem 4rem;
         gap: 4rem;
         background-color: var(--background-page-primary);
         overflow: auto;
@@ -22,10 +22,37 @@
         }
     }
 
-    &__button {
+    &__search {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1.25rem;
+        border-radius: 0.75rem;
+        border: 1px solid var(--background-secondary);
+        background-color: var(--background-card-primary);
+
         &__icon {
-            transform: rotate(45deg);
-            color: var(--color-primary);
+            font-size: 4rem;
+            color: var(--text-secondary);
+        }
+
+        input {
+            padding: 0 1rem;
+            border: none;
+            outline: none;
+            font-size: var(--font-size-default);
+            background-color: var(--background-card-primary);
+            color: var(--text-primary);
+            width: 100%;
+
+            &::placeholder {
+                color: var(--text-secondary);
+            }
+        }
+
+        select {
+            border: none;
+            outline: none;
+            padding: 0 1rem;
         }
     }
 }
