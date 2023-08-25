@@ -3,4 +3,12 @@
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     gap: 2rem;
     width: 100%;
+
+    &--large {
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    }
+
+    &--inline {
+        grid-template-columns: 1fr;
+    }
 }
