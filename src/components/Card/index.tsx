@@ -12,7 +12,7 @@ const Card = ({ children, title = '', subtitle = '', className = '', style = {} 
     return (
         <div className={`card ${className}`} style={style}>
             {children}
-            <h3 className="card__title">{title}</h3>
+            <h4 className="card__title">{title}</h4>
             {subtitle && <small className="card__subtitle">{subtitle}</small>}
         </div>
     );
