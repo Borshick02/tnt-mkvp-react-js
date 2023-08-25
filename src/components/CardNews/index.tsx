@@ -11,9 +11,9 @@ const CardNews = () => {
     const handleClick = (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
         const target = event.target as HTMLParagraphElement;
         target.classList.toggle('card-news-active');
-    }
+    };
     return (
-        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+        <div className='wrap'>
             <div className="card-news">
                 <img src={imgCard} alt="" className="card-news__img" />
                 <h5 className="card-news__title">ТНТ на ЦИПР-2023</h5>
