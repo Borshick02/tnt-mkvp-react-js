@@ -13,7 +13,7 @@ const MediaCenter = () => {
     return (
         <div className="media-center">
             <PageTitle />
-            <Grid columns="7">
+            <Grid type="large">
                 <Card className="media-center__item" title="Корпоративные медиа">
                     <img src={corp} alt="media" />
                 </Card>
