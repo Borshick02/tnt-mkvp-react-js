@@ -1,10 +1,18 @@
 .card-news {
-  background: var(--background-card-primary);
-  padding: 1rem;
+  background: transparent;
+  padding: 0;
   width: 100%;
-  // max-width: 100%;
   border-radius: 1rem;
   color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 3rem;
+  }
 
   &__img {
     width: 100%;
@@ -29,10 +37,9 @@
     overflow: visible;
     white-space: normal;
   }
-}
 
-.wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(36.6rem,1fr));
-  gap: 2.4rem;
+  &__more {
+    padding: 4rem 0 0;
+    text-align: center;
+  }
 }

@@ -9,9 +9,9 @@ export default function IndexPage() {
 
     return (
         <div className="home">
-            <CardNews />
-            <ServicesCard />
             <Slider />
+            <ServicesCard />
+            <CardNews />
         </div>
     );
 }

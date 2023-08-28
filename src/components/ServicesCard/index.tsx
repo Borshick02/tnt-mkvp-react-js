@@ -10,7 +10,7 @@ import Scud from '../../assets/icons/scud.svg';
 
 const ServicesCard = () => {
     return (
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <div className='wrap'>
             <div className="services-card">
                 <div className="services-card__icon">
                     <ReactSVG src={OifIcon} />
