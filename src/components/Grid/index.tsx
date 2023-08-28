@@ -2,7 +2,7 @@ import './index.scss';
 
 interface Props {
     children: React.ReactNode;
-    type?: 'standart' | 'large' | 'half' | 'inline';
+    type?: 'standart' | 'large' | 'half' | 'inline' | 'small';
     gap?: React.CSSProperties['gap'];
     columns?: React.CSSProperties['gridTemplateColumns'];
     className?: string;
@@ -14,7 +14,7 @@ const Grid = ({ children, type = 'standart', gap, columns, className = '', style
         <div
             className={`grid ${type === 'large' ? 'grid--large' : ''} ${type === 'half' ? 'grid--half' : ''} ${
                 type === 'inline' ? 'grid--inline' : ''
-            } ${className}`}
+            } ${type === 'small' ? 'grid--small' : ''} ${className}`}
             style={{ gap: gap, columns: columns, ...style }}
         >
             {children}
