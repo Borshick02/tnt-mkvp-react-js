@@ -1,3 +1,5 @@
+@import '../../sass/mixins';
+
 .menu-navigation {
     display: flex;
     flex-direction: column;
@@ -6,6 +8,10 @@
     background-color: var(--background-card-primary);
     border-radius: 0 2rem 2rem 0;
     padding-bottom: 1.5rem;
+
+    @include respond(tab-port) {
+        display: none;
+    }
 
     &__container {
         display: flex;

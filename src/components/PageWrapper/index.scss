@@ -1,3 +1,5 @@
+@import '../../sass/mixins';
+
 .page-wrapper {
     display: flex;
     min-height: 100vh;
@@ -10,6 +12,11 @@
         padding: 2rem 4rem;
         gap: 4rem;
         background-color: var(--background-page-primary);
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 4rem 3rem;
+        }
     }
 
     &__head {
@@ -28,6 +35,10 @@
         border-radius: 0.75rem;
         border: 1px solid var(--background-secondary);
         background-color: var(--background-card-primary);
+
+        @include respond(tab-land) {
+            display: none;
+        }
 
         &__icon {
             font-size: 4rem;
@@ -52,6 +63,7 @@
             border: none;
             outline: none;
             padding: 0 1rem;
+            font-size: inherit;
         }
     }
 }
