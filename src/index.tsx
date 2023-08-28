@@ -36,6 +36,7 @@ import Support from 'pages/Support';
 import Info from 'pages/Info';
 
 import 'tnt-uikit-reactjs/src/scss/main.scss';
+import './index.scss';
 
 import moment from 'moment';
 import 'moment/locale/ru';

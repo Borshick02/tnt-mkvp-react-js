@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 28rem;
+    width: var(--menu-width);
     background-color: var(--background-card-primary);
     border-radius: 0 2rem 2rem 0;
 
     &__group {
         display: flex;
         flex-direction: column;
-        width: 25rem;
+        width: var(--menu-item-width);
         gap: 1rem;
     }
 
