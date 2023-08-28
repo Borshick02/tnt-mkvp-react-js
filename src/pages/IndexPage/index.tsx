@@ -3,7 +3,7 @@ import newSystem from 'assets/images/new-system.png';
 
 import CardNews from 'components/CardNews';
 import CardServices from 'components/CardServices';
-import Slider from 'components/Slider';
+import SliderHero from 'components/SliderHero';
 import SliderAds from 'components/SliderAds';
 import SliderAdsImg from 'components/SliderAdsImg';
 import Card from 'components/Card';
@@ -14,7 +14,7 @@ export default function IndexPage() {
     return (
         <div className="home">
             <div className="home__left">
-                <Slider />
+                <SliderHero />
             </div>
             <div className="home__left">
                 <CardServices />

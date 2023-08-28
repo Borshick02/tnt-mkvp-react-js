@@ -1,84 +1,33 @@
 @import '../../sass/mixins';
 
 .slider {
-    background: var(--background-card-primary);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 1.6rem;
     border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-
-    &__content {
-        display: flex;
-
-        @include respond(tab-land) {
-            flex-direction: column-reverse;
-        }
-    }
-
-    &__left {
-        display: flex;
-        flex-direction: column;
-        width: 41%;
-        padding: 1.6rem;
-
-        @include respond(tab-land) {
-            width: 100%;
-        }
-    }
-
-    &__right {
-        display: flex;
-        flex-direction: column;
-        width: 59%;
-
-        @include respond(tab-land) {
-            width: 100%;
-        }
-    }
-
-    &__img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-    &__desc {
-        background: var(--background-secondary);
-        color: var(--text-secondary);
-        padding: 0.55rem 0.8rem;
-        border-radius: 0.5rem;
-        width: fit-content;
-        font-size: var(--font-size-small);
-    }
 
     &__title {
-        display: inline-block;
-        font-size: var(--font-size-large);
-        margin-bottom: 4rem;
-        margin-right: 1rem;
-        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--font-size-medium);
+        padding-bottom: 1.6rem;
+        border-bottom: 1px solid #d6d8dd;
+        margin-bottom: 1.6rem;
+    }
 
-        @include respond(tab-land) {
-            margin-right: 3rem;
-        }
+    &__swiper {
+        width: 100%;
     }
 
     &__counter {
         display: flex;
         align-items: center;
-        z-index: 10;
-        margin-top: auto;
-    }
-
-    &__prev,
-    &__next {
-        width: 4.8rem;
-        height: 4.8rem;
-        background: #e5e7eb;
-        display: flex;
         justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        cursor: pointer;
+        margin-top: auto;
     }
 
     &__current {
@@ -87,5 +36,10 @@
 
     &__total {
         margin: 0 1.6rem 0 0;
+    }
+
+    &__prev,
+    &__next {
+        cursor: pointer;
     }
 }
