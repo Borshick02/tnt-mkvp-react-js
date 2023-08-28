@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { Routes } from '../../config';
 import { SearchMagnifyingGlassIcon } from 'tnt-uikit-reactjs/src/icons';
 import { Divider } from 'tnt-uikit-reactjs/src/components';
+import logo from '../../assets/images/logo.png';
 
 import MenuNavigation from '../MenuNavigation';
 import MenuUser from '../MenuUser';
@@ -32,9 +33,14 @@ export default function PageWrapper() {
                             <option value="3">По еще кому-то</option>
                         </select>
                     </div>
+                    <div className="page-wrapper__logo">
+                        <img src={logo} alt="logo" />
+                    </div>
                     <MenuUser style={{ marginLeft: 'auto' }} />
                 </div>
-                <Outlet />
+                <div className="page-wrapper__outlet">
+                    <Outlet />
+                </div>
             </div>
         </div>
     );
