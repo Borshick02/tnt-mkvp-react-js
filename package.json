@@ -24,7 +24,7 @@
         "react-scripts": "5.0.1",
         "react-svg": "^16.1.22",
         "sass": "1.64.2",
-        "swiper": "9.4.1",
+        "swiper": "^9.4.1",
         "tnt-uikit-reactjs": "github:valery-lavrik/tnt-uikit-reactjs",
         "typescript": "4.9.5",
         "web-vitals": "2.1.4"

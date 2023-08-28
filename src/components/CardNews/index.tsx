@@ -10,12 +10,18 @@ import Card from 'components/Card';
 // }
 
 const CardNews = () => {
+
     const handleClick = (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
         const target = event.target as HTMLParagraphElement;
         target.classList.toggle('card-news-active');
     };
     return (
-        <Grid type="large">
+        <div className="card-news">
+            <div className="card-news__head">
+                <h3 className="card-news__title">Новости</h3>
+                <a href="#" className="card-news__link">Смотреть все</a>
+            </div>
+            <Grid type="large">
             <Card>
                 <img src={imgCard} alt="" className="card-news__img" />
                 <h5 className="card-news__title">ТНТ на ЦИПР-2023</h5>
@@ -71,6 +77,8 @@ const CardNews = () => {
                 <div className="card-news__date">06.06</div>
             </Card>
         </Grid>
+        <a href="#" className="card-news__more">Показать еще</a>
+        </div>
     );
 };
 
