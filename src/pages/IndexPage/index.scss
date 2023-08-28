@@ -66,8 +66,18 @@
             }
         }
 
-        &__gradient {
-            background: linear-gradient(120deg, #ffffff 60%, #6fa3ff 100%);
+        &__img {
+            display: flex;
+            align-items: center;
+
+            img {
+                display: block;
+                object-fit: cover;
+            }
+        }
+
+        &--gradient {
+            background: linear-gradient(120deg, #ffffff 70%, #6fa3ff 120%);
         }
     }
 

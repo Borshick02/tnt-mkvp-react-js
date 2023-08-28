@@ -1,13 +1,10 @@
 import React from 'react';
-import './index.scss';
 import imgCard from '../../assets/images/CardNews.png';
 
 import Grid from 'components/Grid';
 import Card from 'components/Card';
 
-// interface handleClick {
-//     event: React.MouseEvent<HTMLParagraphElement, MouseEvent>;
-// }
+import './index.scss';
 
 const CardNews = () => {
     const handleClick = (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
@@ -18,7 +15,7 @@ const CardNews = () => {
         <div className="card-news">
             <div className="card-news__head">
                 <h3 className="card-news__title">Новости</h3>
-                <a href="#" className="card-news__link">
+                <a href="/" className="card-news__link">
                     Смотреть все
                 </a>
             </div>
@@ -78,7 +75,7 @@ const CardNews = () => {
                     <div className="card-news__date">06.06</div>
                 </Card>
             </Grid>
-            <a href="#" className="card-news__more">
+            <a href="/" className="card-news__more">
                 Показать еще
             </a>
         </div>

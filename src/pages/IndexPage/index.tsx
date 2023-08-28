@@ -1,5 +1,5 @@
-import coat from 'assets/icons/coat.svg';
-import imgLink from 'assets/icons/img-link.svg';
+import reward from 'assets/images/reward.png';
+import newSystem from 'assets/images/new-system.png';
 
 import CardNews from 'components/CardNews';
 import CardServices from 'components/CardServices';
@@ -22,17 +22,17 @@ export default function IndexPage() {
             </div>
             <div className="home__right">
                 <div className="home__info">
-                    <Card inline>
+                    <Card inline className="home__card">
                         <div className="home__card__img">
-                            <img src={coat} alt="coat" />
+                            <img src={reward} alt="Reward" />
                         </div>
                         <div className="home__card__text home__card__text--center">
                             <h3>Награда ПАО «Транснефть»</h3>
                         </div>
                     </Card>
-                    <Card inline className="home__card__gradient">
+                    <Card inline className="home__card home__card--gradient">
                         <div className="home__card__img">
-                            <img src={imgLink} alt="imgLink" />
+                            <img src={newSystem} alt="New System" />
                         </div>
                         <div className="home__card__text">
                             <h3>
