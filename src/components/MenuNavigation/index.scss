@@ -5,6 +5,12 @@
     width: var(--menu-width);
     background-color: var(--background-card-primary);
     border-radius: 0 2rem 2rem 0;
+    padding-bottom: 1.5rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
 
     &__group {
         display: flex;

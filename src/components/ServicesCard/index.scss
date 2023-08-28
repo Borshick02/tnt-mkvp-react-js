@@ -1,5 +1,5 @@
 .services-cards {
-  margin: 0 0 4.8rem;
+    margin: 0 0 4.8rem;
 
     &__content {
         background: var(--background-card-primary);
@@ -10,16 +10,20 @@
     }
 
     &__head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 0 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-size: var(--font-size-large);
     }
 
     &__wrap {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2.4rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.4rem;
     }
 
     &__icon {
@@ -35,7 +39,7 @@
     }
 
     &__link {
-      font-weight: bold;
+        font-weight: bold;
     }
 }
 

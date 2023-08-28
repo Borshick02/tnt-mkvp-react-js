@@ -1,53 +1,50 @@
 .card-news {
-  background: transparent;
-  padding: 0;
-  width: 100%;
-  border-radius: 1rem;
-  color: var(--text-secondary);
-  display: flex;
-  flex-direction: column;
-
-  &__head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0 3rem;
-  }
-
-  &__img {
+    background: transparent;
+    padding: 0;
     width: 100%;
-    margin: 0 0 2.4rem;
-  }
+    border-radius: 1rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
 
-  &__title {
-    margin: 0 0 .8rem;
-    color: var(--text-primary);
-    font-size: var(--font-size-medium);
-  }
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
 
-  &__desc {
-    margin: 0 0 4.8rem;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
-  }
+    &__img {
+        width: 100%;
+        margin: 0 0 2.4rem;
+    }
 
-  &-active {
-    overflow: visible;
-    white-space: normal;
-  }
+    &__title {
+        margin: 0 0 0.8rem;
+        color: var(--text-primary);
+        font-size: var(--font-size-large);
+    }
 
-  &__more {
-    padding: 4rem 0 0;
-    text-align: center;
-  }
+    &__desc {
+        margin: 0 0 4.8rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+    }
 
-  &__link {
-    font-weight: bold;
-  }
+    &-active {
+        overflow: visible;
+        white-space: normal;
+    }
 
-  &__more {
-    font-weight: bold;
-  }
+    &__more {
+        margin: 4rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &__link {
+        font-weight: bold;
+    }
 }
