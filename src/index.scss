@@ -3,6 +3,21 @@
 :root {
     --menu-width: 28rem;
     --menu-item-width: 25rem;
+    --wrapper-padding-x: 4rem;
+    --wrapper-padding-y: 2rem;
+
+    @include respond(tab-land) {
+        --wrapper-padding-x: 3rem;
+    }
+
+    @include respond(tab-port) {
+        --wrapper-padding-y: 4rem;
+    }
+
+    @include respond(mobile) {
+        --wrapper-padding-y: 3rem;
+        --wrapper-padding-x: 2rem;
+    }
 }
 
 html {

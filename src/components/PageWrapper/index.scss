@@ -17,20 +17,21 @@
     }
 
     &__outlet {
-        padding: 2rem 4rem;
+        padding: var(--wrapper-padding-y) var(--wrapper-padding-x);
 
         @include respond(tab-land) {
-            padding: 2rem 3rem;
+            padding: var(--wrapper-padding-y) var(--wrapper-padding-x);
         }
 
         @include respond(tab-port) {
-            padding: 4rem 3rem;
+            padding: var(--wrapper-padding-y) var(--wrapper-padding-x);
         }
     }
 
     &__head {
         display: flex;
         padding: 2rem 4rem;
+        gap: 3rem;
 
         @include respond(tab-land) {
             padding: 2rem 3rem;
@@ -38,6 +39,7 @@
 
         @include respond(tab-port) {
             padding: 3rem 3rem;
+            border-radius: 0 0 2rem 2rem;
             background-color: var(--background-card-primary);
         }
 
@@ -72,7 +74,7 @@
         border: 1px solid var(--background-secondary);
         background-color: var(--background-card-primary);
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             display: none;
         }
 
