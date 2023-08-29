@@ -1,51 +1,25 @@
+@import '../../sass/mixins';
+
 .slider-ads {
-  background: #fff;
-  padding: 1.6rem;
-  border-radius: 1rem;
-  margin: 0 0 2.4rem;
-
-  &__title {
-    font-size: 20px;
-    padding: 0 0 1.6rem;
-    border-bottom: 1px solid #D6D8DD;
-    margin: 0 0 1.6rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    height: 100%;
+    padding: 1.6rem;
+    background: var(--background-card-primary);
 
-  &__item {
-    display: flex;
-    justify-content: space-between;
-    margin:  0 0 1.6rem;
-  }
+    li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+    }
 
-  &__text {
-    font-size: 1.4rem;
-    font-weight: bold;
-    width: 80%;
-  }
+    &__text {
+        font-size: var(--font-size-small);
+        font-weight: bold;
+        width: 80%;
+    }
 
-  &__date {
-    font-size: 1.2rem;
-    color: #74777F;
-  }
-
-  &__counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__current {
-    margin: 0 0 0 1.6rem;
-  }
-
-  &__total {
-    margin: 0 1.6rem 0 0;
-  }
-
-  &__prev, &__next {
-    cursor: pointer;
-  }
+    &__date {
+        font-size: var(--font-size-small);
+        color: var(--text-secondary);
+    }
 }

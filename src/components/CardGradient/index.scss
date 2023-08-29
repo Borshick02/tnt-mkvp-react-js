@@ -1,0 +1,41 @@
+.card-gradient {
+    display: flex;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: var(--font-size-default);
+
+        &--center {
+            justify-content: center;
+        }
+
+        h3 {
+            font-size: inherit;
+
+            span {
+                color: #74777f;
+            }
+        }
+
+        a {
+            font-size: var(--font-size-smallest);
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+            object-fit: cover;
+        }
+    }
+
+    &--gradient {
+        background: linear-gradient(120deg, var(--background-card-primary) 70%, #6fa3ff 120%);
+    }
+}

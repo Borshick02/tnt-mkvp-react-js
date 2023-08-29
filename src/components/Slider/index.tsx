@@ -1,67 +1,76 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react';
+import { ChevronLeftIcon } from 'tnt-uikit-reactjs/src/icons';
+import { ChevronRightIcon } from 'tnt-uikit-reactjs/src/icons';
+import { Navigation } from 'swiper';
+import { Swiper } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
 import './index.scss';
 import 'swiper/css';
 
-import img from '../../assets/images/slider-img.png';
+interface Props {
+    children: React.ReactNode;
+    id: string;
+    title?: string;
+    slidesPerView?: number;
+    spaceBetween?: number;
+    navigation?: boolean;
+    allowTouchMove?: boolean;
+    CustomNavigation?: () => JSX.Element;
+    className?: string;
+}
 
-import { ChevronLeftIcon } from 'tnt-uikit-reactjs/src/icons';
-import { ChevronRightIcon } from 'tnt-uikit-reactjs/src/icons';
-
-import { Navigation } from 'swiper';
-
-const Slider = () => {
+const Slider = ({
+    children,
+    title,
+    id,
+    slidesPerView = 1,
+    allowTouchMove = false,
+    spaceBetween = 50,
+    navigation = true,
+    CustomNavigation,
+    className = '',
+}: Props) => {
     return (
-            <div className="slider">
-                <Swiper
-                    modules={[Navigation]}
-                    direction="horizontal"
-                    slidesPerView={1}
-                    navigation={{
-                        nextEl: '.slider__next',
-                        prevEl: '.slider__prev',
-                    }}
-                >
-                    <div className="slider__wrap">
-                        <SwiperSlide>
-                            <div className="slider__content">
-                                <div className="slider__left">
-                                    <div className="slider__desc">Не черномор</div>
-                                    <h5 className="slider__title">Дан старт корпоративной эстафете в честь юбилея ПАО «Транснефть»</h5>
-                                </div>
-                                <div className="slider__right">
-                                    <img src={img} alt="" className="slider__img" />
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="slider__content">
-                                <div className="slider__left">
-                                    <div className="slider__desc">Не черномор</div>
-                                    <h5 className="slider__title">Дан старт корпоративной эстафете в честь юбилея ПАО «Транснефть»</h5>
-                                </div>
-                                <div className="slider__right">
-                                    <img src={img} alt="" className="slider__img" />
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    </div>
-                </Swiper>
-                <div className="slider__counter">
-                    <div className="swiper-button-prev slider__prev">
-                        <ChevronLeftIcon />
-                    </div>
-                    <div className="slider__current">1</div>
-                    <div>/</div>
-                    <div className="slider__total">0</div>
-                    <div className="swiper-button-next slider__next">
+        <div className={`slider ${className}`}>
+            {title && (
+                <h5 className="slider__title">
+                    {title}
+                    <span className="slider__arrow">
                         <ChevronRightIcon />
+                    </span>
+                </h5>
+            )}
+            <Swiper
+                className="slider__swiper"
+                modules={[Navigation]}
+                direction="horizontal"
+                spaceBetween={spaceBetween}
+                slidesPerView={slidesPerView}
+                navigation={{
+                    prevEl: `.slider__prev--${id}`,
+                    nextEl: `.slider__next--${id}`,
+                }}
+                allowTouchMove={allowTouchMove}
+            >
+                {children}
+            </Swiper>
+            {navigation &&
+                (CustomNavigation ? (
+                    <CustomNavigation />
+                ) : (
+                    <div className="slider__counter">
+                        <div className={`slider__prev--${id} slider__prev`}>
+                            <ChevronLeftIcon />
+                        </div>
+                        <div className="slider__current">1</div>
+                        <div>/</div>
+                        <div className="slider__total">2</div>
+                        <div className={`slider__next--${id} slider__next`}>
+                            <ChevronRightIcon />
+                        </div>
                     </div>
-                </div>
-            </div>
+                ))}
+        </div>
     );
 };
 

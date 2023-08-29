@@ -1,6 +1,37 @@
+@import './sass/mixins';
+
 :root {
     --menu-width: 28rem;
     --menu-item-width: 25rem;
+    --wrapper-padding-x: 4rem;
+    --wrapper-padding-y: 2rem;
+
+    @include respond(tab-land) {
+        --wrapper-padding-x: 3rem;
+    }
+
+    @include respond(tab-port) {
+        --wrapper-padding-y: 4rem;
+    }
+
+    @include respond(mobile) {
+        --wrapper-padding-y: 3rem;
+        --wrapper-padding-x: 2rem;
+    }
+}
+
+html {
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%
+    }
 }
 
 ul {

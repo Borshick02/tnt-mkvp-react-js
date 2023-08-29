@@ -1,162 +1,94 @@
+@import '../../sass/mixins';
+
 .home {
-    display: flex;
+    display: grid;
     width: 100%;
-    justify-content: space-between;
+    grid-template-columns: 70% 28%;
+    grid-column-gap: 2%;
+    grid-row-gap: 4rem;
+
+    @include respond(tab-land) {
+        grid-template-columns: 65% 33%;
+    }
+
+    @include respond(tab-port) {
+        grid-row-gap: 3rem;
+        grid-template-columns: 100%;
+    }
 
     &__left {
-        width: 65%;
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 4rem;
+
+        @include respond(tab-port) {
+            grid-row-gap: 3rem;
+        }
     }
 
     &__right {
-        width: 30%;
-    }
-
-    &__menu {
-        display: flex;
-        margin-bottom: 3rem;
-
-        &__container {
-            display: flex;
-            overflow-x: auto;
-        }
-
-        ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        &__item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: var(--font-size-normal);
-            font-weight: bold;
-            white-space: nowrap;
-            color: var(--text-secondary);
-            cursor: pointer;
-
-            &:hover {
-                color: var(--text-primary);
-            }
-
-            &--active {
-                color: var(--text-primary);
-            }
-        }
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        padding: 4rem;
-        border-radius: 1rem;
-        gap: 5rem;
-        background-color: var(--background-card-primary);
-
-        &__container {
-            display: flex;
-            overflow-x: auto;
-        }
-    }
-
-    &__control {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+        grid-row-gap: 2rem;
         display: flex;
         flex-direction: column;
 
-        &__menu {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
+        @include respond(tab-port) {
+            display: none;
+        }
 
-            h4 {
-                font-size: var(--font-size-medium);
+        @include respond(mobile) {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            grid-row-gap: 2rem;
+            display: flex;
+        }
+
+        &--tablet {
+            display: none;
+
+            @include respond(tab-port) {
+                width: calc(100% + var(--wrapper-padding-x));
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+                grid-row-gap: 2rem;
+                display: flex;
+                flex-direction: column;
             }
 
-            a {
-                color: var(--primary-default);
-                text-decoration: none;
-                cursor: pointer;
+            @include respond(mobile) {
+                display: none;
             }
         }
 
-        &__filter {
+        &__slide {
             display: flex;
-            align-items: center;
+            height: 100%;
+            flex-direction: column;
             gap: 2rem;
-
-            &__label {
-                color: var(--text-secondary);
-            }
         }
     }
 
-    &__graph {
+    &__slider-tablet {
         display: flex;
+        flex-direction: column;
+    }
+
+    &__ads {
+        display: grid;
+        grid-template-columns: 100%;
         gap: 2rem;
 
-        &__1 {
-            width: 25%;
+        @include respond(tab-port) {
+            gap: 0;
+            grid-template-columns: 48.5% 48.5%;
+            grid-column-gap: 3%;
         }
 
-        &__2 {
-            width: 45%;
-        }
-
-        &__3 {
-            width: 45%;
-        }
-    }
-
-    &__process {
-        display: flex;
-        flex-direction: column;
-
-        h4 {
-            font-size: var(--font-size-small);
-            margin-bottom: 1rem;
-        }
-
-        table {
-            border-collapse: collapse;
-            padding: 1rem;
-
-            tr {
-                font-size: var(--font-size-small);
-
-                &:not(:last-child) {
-                    border-bottom: 1px solid var(--text-secondary);
-                }
-            }
-
-            th {
-                text-align: center;
-                padding: 1rem;
-
-                &:first-of-type {
-                    text-align: start;
-                }
-            }
-
-            td:first-of-type {
-                text-align: start;
-            }
-        }
-
-        &__cell-title {
-            &--sortable {
-                cursor: pointer;
-            }
-        }
-
-        &__cell {
-            text-align: end;
-            padding: 1rem;
-
-            &--red {
-                color: var(--status-red-danger);
-            }
+        @include respond(mobile) {
+            grid-template-columns: 100%;
+            gap: 2rem;
         }
     }
 }

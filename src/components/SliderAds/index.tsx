@@ -1,101 +1,37 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
+import Slider from 'components/Slider';
+
 import './index.scss';
-
-import { ChevronLeftIcon } from 'tnt-uikit-reactjs/src/icons';
-import { ChevronRightIcon } from 'tnt-uikit-reactjs/src/icons';
-
-import { Navigation } from 'swiper';
 
 const SliderAds = () => {
     return (
-        <div>
-            <div className="slider-ads">
-                <h5 className="slider-ads__title">
-                    Объявления
-                    <span className="slider-ads__arrow">
-                        <ChevronRightIcon />
-                    </span>
-                </h5>
-                <Swiper
-                 modules={[Navigation]}
-                 direction="horizontal"
-                 spaceBetween={50}
-                 slidesPerView={1}
-                 navigation={{
-                     nextEl: '.slider-ads__next',
-                     prevEl: '.slider-ads__prev',
-                 }}
-                >
-                    <SwiperSlide>
-                    <div className="slider-ads__slide">
-                    <ul className="slider-ads__list">
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                    </ul>
-                </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                    <div className="slider-ads__slide">
-                    <ul className="slider-ads__list">
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                        <li className="slider-ads__item">
-                            <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
-                            <div className="slider-ads__date">27.04</div>
-                        </li>
-                    </ul>
-                </div>
-                    </SwiperSlide>
-                </Swiper>
-                <div className="slider-ads__counter">
-                    <div className="swiper-button-prev slider-ads__prev">
-                        <ChevronLeftIcon />
-                    </div>
-                    <div className="slider-ads__current">1</div>
-                    <div>/</div>
-                    <div className="slider-ads__total">0</div>
-                    <div className="swiper-button-next slider-ads__next">
-                        <ChevronRightIcon />
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Slider id="slider-ads" className="slider-ads" title="Объявления">
+            <SwiperSlide>
+                <ul style={{ display: 'flex', flexDirection: 'column' }}>
+                    <li>
+                        <div className="slider-ads__text">Телеграм-канал V летней спартакиады</div>
+                        <div className="slider-ads__date">27.05</div>
+                    </li>
+                    <li>
+                        <div className="slider-ads__text">Приглашаем посетить художественную экспозицию</div>
+                        <div className="slider-ads__date">28.04</div>
+                    </li>
+                </ul>
+            </SwiperSlide>
+            <SwiperSlide>
+                <ul style={{ display: 'flex', flexDirection: 'column-reverse' }}>
+                    <li>
+                        <div className="slider-ads__text">Корпоративная фотовыставка</div>
+                        <div className="slider-ads__date">05.04</div>
+                    </li>
+                    <li>
+                        <div className="slider-ads__text">Опубликован раздел портала "СРТ - ОПТИМУМ"</div>
+                        <div className="slider-ads__date">24.03</div>
+                    </li>
+                </ul>
+            </SwiperSlide>
+        </Slider>
     );
 };
 

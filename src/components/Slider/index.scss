@@ -1,72 +1,44 @@
+@import '../../sass/mixins';
+
 .slider {
-  background: #fff;
-  border-radius: 1rem;
-  position: relative;
-  margin: 0 0 4.8rem;
-
-  &__content {
     display: flex;
-    justify-content: space-between;
-  }
-
-  &__left {
-    width: 44.8rem;
-    max-width: 100%;
-    padding: 1.6rem;
-  }
-
-  &__right {
-    width: 70rem;
-    max-width: 100%;
-  }
-
-  &__img {
+    flex-direction: column;
     border-radius: 1rem;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
 
-  &__desc {
-    background: var(--background-secondary);
-    color: var(--text-secondary);
-    padding: .55rem .8rem;
-    border-radius: .5rem;
-    width: fit-content;
-    font-size: var(--font-size-small);
-    margin: 0 0 1.9rem;
-  }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--font-size-medium);
+        padding-bottom: 1.6rem;
+        border-bottom: 1px solid #d6d8dd;
+        margin-bottom: 1.6rem;
+    }
 
-  &__title {
-    font-size: var(--font-size-large);
-  }
+    &__swiper {
+        width: 100%;
+    }
 
-  &__counter {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 1.6rem;
-    right: 0;
-    bottom: 1.6rem;
-    z-index: 10;
-  }
+    &__counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+    }
 
-  &__prev, &__next {
-    width: 4.8rem;
-    height: 4.8rem;
-    background: #E5E7EB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+    &__current {
+        margin: 0 0 0 1.6rem;
+    }
 
-  &__current {
-    margin: 0 0 0 1.6rem;
-  }
+    &__total {
+        margin: 0 1.6rem 0 0;
+    }
 
-  &__total {
-    margin: 0 1.6rem 0 0;
-  }
+    &__prev,
+    &__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 }
