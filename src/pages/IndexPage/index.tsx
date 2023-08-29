@@ -1,12 +1,13 @@
-import reward from 'assets/images/reward.png';
-import newSystem from 'assets/images/new-system.png';
+import { SwiperSlide } from 'swiper/react';
 
 import CardNews from 'components/CardNews';
 import CardServices from 'components/CardServices';
 import SliderHero from 'components/SliderHero';
 import SliderAds from 'components/SliderAds';
 import SliderAdsImg from 'components/SliderAdsImg';
-import Card from 'components/Card';
+import Slider from 'components/Slider';
+import CardReward from 'components/CardReward';
+import CardGradient from 'components/CardGradient';
 
 import './index.scss';
 
@@ -21,31 +22,39 @@ export default function IndexPage() {
                 <CardNews />
             </div>
             <div className="home__right">
-                <div className="home__info">
-                    <Card inline className="home__card">
-                        <div className="home__card__img">
-                            <img src={reward} alt="Reward" />
-                        </div>
-                        <div className="home__card__text home__card__text--center">
-                            <h3>Награда ПАО «Транснефть»</h3>
-                        </div>
-                    </Card>
-                    <Card inline className="home__card home__card--gradient">
-                        <div className="home__card__img">
-                            <img src={newSystem} alt="New System" />
-                        </div>
-                        <div className="home__card__text">
-                            <h3>
-                                Новая система: <br /> <span>СРТ ОПТИМУМ</span>
-                            </h3>
-                            <a href="/">Подать идею</a>
-                        </div>
-                    </Card>
-                </div>
+                <CardReward />
+                <CardGradient />
                 <div className="home__ads">
                     <SliderAds />
                     <SliderAdsImg />
                 </div>
+            </div>
+            <div className="home__right home__right--adaptive">
+                <Slider
+                    className="home__slider-adaptive"
+                    allowTouchMove
+                    slidesPerView={2.5}
+                    spaceBetween={16}
+                    navigation={false}
+                    id="slider-adaptive"
+                >
+                    <SwiperSlide>
+                        <div className="home__right__slide">
+                            <CardReward />
+                            <CardGradient />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="home__right__slide">
+                            <SliderAds short />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="home__right__slide">
+                            <SliderAdsImg />
+                        </div>
+                    </SwiperSlide>
+                </Slider>
             </div>
         </div>
     );

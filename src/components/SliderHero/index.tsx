@@ -23,7 +23,7 @@ const CustomNavigation = (id: string) => (
 const SliderHero = () => {
     return (
         <div className="slider-hero">
-            <Slider id="slider-hero" CustomNavigation={() => CustomNavigation('slider-hero')}>
+            <Slider id="slider-hero" allowTouchMove CustomNavigation={() => CustomNavigation('slider-hero')}>
                 <SwiperSlide>
                     <div className="slider-hero__content">
                         <div className="slider-hero__left">

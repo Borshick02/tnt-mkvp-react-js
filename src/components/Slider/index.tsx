@@ -11,11 +11,25 @@ interface Props {
     children: React.ReactNode;
     id: string;
     title?: string;
+    slidesPerView?: number;
+    spaceBetween?: number;
+    navigation?: boolean;
+    allowTouchMove?: boolean;
     CustomNavigation?: () => JSX.Element;
     className?: string;
 }
 
-const Slider = ({ children, title, id, CustomNavigation, className = '' }: Props) => {
+const Slider = ({
+    children,
+    title,
+    id,
+    slidesPerView = 1,
+    allowTouchMove = false,
+    spaceBetween = 50,
+    navigation = true,
+    CustomNavigation,
+    className = '',
+}: Props) => {
     return (
         <div className={`slider ${className}`}>
             {title && (
@@ -30,30 +44,32 @@ const Slider = ({ children, title, id, CustomNavigation, className = '' }: Props
                 className="slider__swiper"
                 modules={[Navigation]}
                 direction="horizontal"
-                spaceBetween={50}
-                slidesPerView={1}
+                spaceBetween={spaceBetween}
+                slidesPerView={slidesPerView}
                 navigation={{
                     prevEl: `.slider__prev--${id}`,
                     nextEl: `.slider__next--${id}`,
                 }}
+                allowTouchMove={allowTouchMove}
             >
                 {children}
             </Swiper>
-            {CustomNavigation ? (
-                <CustomNavigation />
-            ) : (
-                <div className="slider__counter">
-                    <div className={`slider__prev--${id} slider__prev`}>
-                        <ChevronLeftIcon />
+            {navigation &&
+                (CustomNavigation ? (
+                    <CustomNavigation />
+                ) : (
+                    <div className="slider__counter">
+                        <div className={`slider__prev--${id} slider__prev`}>
+                            <ChevronLeftIcon />
+                        </div>
+                        <div className="slider__current">1</div>
+                        <div>/</div>
+                        <div className="slider__total">2</div>
+                        <div className={`slider__next--${id} slider__next`}>
+                            <ChevronRightIcon />
+                        </div>
                     </div>
-                    <div className="slider__current">1</div>
-                    <div>/</div>
-                    <div className="slider__total">2</div>
-                    <div className={`slider__next--${id} slider__next`}>
-                        <ChevronRightIcon />
-                    </div>
-                </div>
-            )}
+                ))}
         </div>
     );
 };

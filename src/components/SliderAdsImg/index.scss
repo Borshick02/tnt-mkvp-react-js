@@ -1,11 +1,21 @@
 @import '../../sass/mixins';
 
 .slider-ads-img {
+    display: flex;
+    height: 100%;
     padding: 1.6rem;
+    background: var(--background-card-primary);
 
     &__img {
         border-radius: 1rem;
         width: 100%;
+
+        display: block;
+        object-fit: cover;
+
+        @include respond(tab-port) {
+            aspect-ratio: 16 / 4.8;
+        }
     }
 
     &__text {

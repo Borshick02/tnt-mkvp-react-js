@@ -4,7 +4,11 @@ import Slider from 'components/Slider';
 
 import './index.scss';
 
-const SliderAds = () => {
+interface Props {
+    short?: boolean;
+}
+
+const SliderAds = ({ short = false }: Props) => {
     return (
         <Slider id="slider-ads" className="slider-ads" title="Объявления">
             <SwiperSlide>
@@ -21,14 +25,18 @@ const SliderAds = () => {
                         <div className="slider-ads__text">О режиме работы и отдыха в мае</div>
                         <div className="slider-ads__date">17.04</div>
                     </li>
-                    <li>
-                        <div className="slider-ads__text">Корпоративная фотовыставка</div>
-                        <div className="slider-ads__date">05.04</div>
-                    </li>
-                    <li>
-                        <div className="slider-ads__text">Опубликован раздел портала "СРТ - ОПТИМУМ"</div>
-                        <div className="slider-ads__date">24.03</div>
-                    </li>
+                    {!short && (
+                        <>
+                            <li>
+                                <div className="slider-ads__text">Корпоративная фотовыставка</div>
+                                <div className="slider-ads__date">05.04</div>
+                            </li>
+                            <li>
+                                <div className="slider-ads__text">Опубликован раздел портала "СРТ - ОПТИМУМ"</div>
+                                <div className="slider-ads__date">24.03</div>
+                            </li>
+                        </>
+                    )}
                 </ul>
             </SwiperSlide>
             <SwiperSlide>
@@ -45,14 +53,18 @@ const SliderAds = () => {
                         <div className="slider-ads__text">О режиме работы и отдыха в мае</div>
                         <div className="slider-ads__date">17.04</div>
                     </li>
-                    <li>
-                        <div className="slider-ads__text">Корпоративная фотовыставка</div>
-                        <div className="slider-ads__date">05.04</div>
-                    </li>
-                    <li>
-                        <div className="slider-ads__text">Опубликован раздел портала "СРТ - ОПТИМУМ"</div>
-                        <div className="slider-ads__date">24.03</div>
-                    </li>
+                    {!short && (
+                        <>
+                            <li>
+                                <div className="slider-ads__text">Корпоративная фотовыставка</div>
+                                <div className="slider-ads__date">05.04</div>
+                            </li>
+                            <li>
+                                <div className="slider-ads__text">Опубликован раздел портала "СРТ - ОПТИМУМ"</div>
+                                <div className="slider-ads__date">24.03</div>
+                            </li>
+                        </>
+                    )}
                 </ul>
             </SwiperSlide>
         </Slider>

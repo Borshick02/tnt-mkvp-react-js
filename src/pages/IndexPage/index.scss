@@ -30,67 +30,40 @@
     &__right {
         grid-row: 1 / 3;
         grid-column: 2 / 3;
+        grid-row-gap: 2rem;
         display: flex;
         flex-direction: column;
-        grid-row-gap: 2rem;
 
         @include respond(tab-port) {
-            grid-row-gap: 4rem;
-            grid-row: 2 / 3;
-            grid-column: 1 / -1;
+            display: none;
         }
-    }
 
-    &__card {
-        &__text {
+        &--adaptive {
+            display: none;
+
+            @include respond(tab-port) {
+                // тут динамически паддинг враппера var(--wrapper-paddding)
+                width: calc(100% + 3rem);
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+                grid-row-gap: 2rem;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &__slide {
             display: flex;
+            height: 100%;
             flex-direction: column;
             justify-content: space-between;
-            font-weight: bold;
-            font-size: var(--font-size-default);
-
-            &--center {
-                justify-content: center;
-            }
-
-            h3 {
-                font-size: inherit;
-
-                span {
-                    color: #74777f;
-                }
-            }
-
-            a {
-                font-size: var(--font-size-smallest);
-            }
-        }
-
-        &__img {
-            display: flex;
-            align-items: center;
-
-            img {
-                display: block;
-                object-fit: cover;
-            }
-        }
-
-        &--gradient {
-            background: linear-gradient(120deg, var(--background-card-primary) 70%, #6fa3ff 120%);
+            gap: 1.6rem;
         }
     }
 
-    &__info {
-        display: grid;
-        grid-template-columns: 100%;
-        gap: 2rem;
-
-        @include respond(tab-port) {
-            gap: 0;
-            grid-template-columns: 48.5% 48.5%;
-            grid-column-gap: 3%;
-        }
+    &__slider-adaptive {
+        display: flex;
+        flex-direction: column;
     }
 
     &__ads {

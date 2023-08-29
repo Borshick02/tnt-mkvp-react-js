@@ -1,7 +1,10 @@
 @import '../../sass/mixins';
 
 .slider-ads {
+    display: flex;
+    height: 100%;
     padding: 1.6rem;
+    background: var(--background-card-primary);
 
     li {
         display: flex;
