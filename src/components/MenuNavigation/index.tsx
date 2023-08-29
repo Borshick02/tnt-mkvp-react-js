@@ -1,13 +1,16 @@
 import { Link, useLocation } from 'react-router-dom';
-
 import { Divider } from 'tnt-uikit-reactjs/src/components';
-import Header from '../Header';
-
 import { RoutesType } from '../../config';
+
+import Header from '../Header';
 
 import './index.scss';
 
-const MenuNavigation = ({ Routes }: { Routes: RoutesType }) => {
+interface Props {
+    Routes: RoutesType;
+}
+
+const MenuNavigation = ({ Routes }: Props) => {
     const { pathname } = useLocation();
 
     return (

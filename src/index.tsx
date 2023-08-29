@@ -10,6 +10,9 @@
 // Цветовая палитра
 // https://www.figma.com/file/N3fcmglAoURnMDKuMohx0A/%5BTNT%5D-Color-Theme-(White%2BDark)?type=design&node-id=49-25203&mode=design&t=dlBT1Dyl4vYxtYUr-0
 
+// Адаптив
+// https://www.figma.com/file/khk2GxwD753I4o0QGq7eFw/Adaptive-Design?type=design&node-id=162-22710&mode=design&t=ziLsmH2ux7mGDRUo-0
+
 import ReactDOM from 'react-dom/client';
 import { Routes, Route, BrowserRouter } from 'react-router-dom'; // https://reactrouter.com/en/main/start/concepts
 
