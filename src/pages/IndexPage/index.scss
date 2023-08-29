@@ -77,7 +77,7 @@
         }
 
         &--gradient {
-            background: linear-gradient(120deg, #ffffff 70%, #6fa3ff 120%);
+            background: linear-gradient(120deg, var(--background-card-primary) 70%, #6fa3ff 120%);
         }
     }
 
