@@ -18,6 +18,8 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'; // https://reac
 
 import { Routes as RoutesList } from './config';
 // import { AuthProvider, RequireAuth } from './pages/Auth/helpers';
+import { Routes as RoutesType } from './config';
+
 
 import { Modal, Notification } from 'tnt-uikit-reactjs/src/utils';
 

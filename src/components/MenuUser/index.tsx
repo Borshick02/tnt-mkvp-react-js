@@ -33,7 +33,11 @@ const MenuUser = ({ style = {}, className = '' }: Props) => {
                     >
                         8
                     </Badge>
-                    <SettingsIcon />
+                    <SettingsIcon
+                        style={{
+                            color: pathname === '/info' ? 'var(--static-white)' : '',
+                        }}
+                    />
                 </div>
                 <DropDown
                     Component={({ close }) => (
@@ -52,9 +56,9 @@ const MenuUser = ({ style = {}, className = '' }: Props) => {
                     Button={() => (
                         <div className="menu-user__info">
                             <img src={avatar} alt="avatar" />
-                            <span>Иван Лавров</span>
+                            <span style={{ color: pathname === '/info' ? 'var(--static-white)' : '' }}>Иван Лавров</span>
                             <div className="menu-user__info__icon">
-                                <CaretDownMdIcon />
+                                <CaretDownMdIcon style={{ color: pathname === '/info' ? 'var(--static-white)' : '' }} />
                             </div>
                         </div>
                     )}
