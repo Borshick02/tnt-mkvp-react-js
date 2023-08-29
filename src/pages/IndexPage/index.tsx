@@ -29,15 +29,8 @@ export default function IndexPage() {
                     <SliderAdsImg />
                 </div>
             </div>
-            <div className="home__right home__right--adaptive">
-                <Slider
-                    className="home__slider-adaptive"
-                    allowTouchMove
-                    slidesPerView={2.5}
-                    spaceBetween={16}
-                    navigation={false}
-                    id="slider-adaptive"
-                >
+            <div className="home__right home__right--tablet">
+                <Slider className="home__slider-tablet" allowTouchMove slidesPerView={2.5} spaceBetween={16} navigation={false} id="slider-adaptive">
                     <SwiperSlide>
                         <div className="home__right__slide">
                             <CardReward />
@@ -46,7 +39,7 @@ export default function IndexPage() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home__right__slide">
-                            <SliderAds short />
+                            <SliderAds />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>

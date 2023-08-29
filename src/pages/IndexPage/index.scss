@@ -38,17 +38,27 @@
             display: none;
         }
 
-        &--adaptive {
+        @include respond(mobile) {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            grid-row-gap: 2rem;
+            display: flex;
+        }
+
+        &--tablet {
             display: none;
 
             @include respond(tab-port) {
-                // тут динамически паддинг враппера var(--wrapper-paddding)
-                width: calc(100% + 3rem);
+                width: calc(100% + var(--wrapper-padding-x));
                 grid-row: 2 / 3;
                 grid-column: 1 / 2;
                 grid-row-gap: 2rem;
                 display: flex;
                 flex-direction: column;
+            }
+
+            @include respond(mobile) {
+                display: none;
             }
         }
 
@@ -56,12 +66,11 @@
             display: flex;
             height: 100%;
             flex-direction: column;
-            justify-content: space-between;
-            gap: 1.6rem;
+            gap: 2rem;
         }
     }
 
-    &__slider-adaptive {
+    &__slider-tablet {
         display: flex;
         flex-direction: column;
     }
@@ -75,6 +84,11 @@
             gap: 0;
             grid-template-columns: 48.5% 48.5%;
             grid-column-gap: 3%;
+        }
+
+        @include respond(mobile) {
+            grid-template-columns: 100%;
+            gap: 2rem;
         }
     }
 }

@@ -1,10 +1,35 @@
+@import '../../sass/mixins';
+
 .card-services {
-    &__content {
-        background: var(--background-card-primary);
-        border-radius: 1rem;
-        display: flex;
-        padding: 1.6rem;
-        align-items: center;
+    &__grid {
+        @include respond(mobile) {
+            display: none;
+        }
+
+        &__item {
+            background: var(--background-card-primary);
+            border-radius: 1rem;
+            display: flex;
+            padding: 1.6rem;
+            align-items: center;
+        }
+    }
+
+    &__slider {
+        display: none;
+
+        @include respond(mobile) {
+            display: flex;
+            width: calc(100% + var(--wrapper-padding-x));
+        }
+
+        &__item {
+            background: var(--background-card-primary);
+            border-radius: 1rem;
+            display: flex;
+            padding: 1.6rem;
+            align-items: center;
+        }
     }
 
     &__head {
@@ -39,8 +64,8 @@
     &__link {
         font-weight: bold;
     }
-}
 
-svg {
-    display: block;
+    svg {
+        display: block;
+    }
 }

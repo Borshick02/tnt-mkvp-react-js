@@ -1,3 +1,5 @@
+@import '../../sass/mixins';
+
 .card-news {
     background: transparent;
     padding: 0;
@@ -12,6 +14,37 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 2rem;
+    }
+
+    &__grid {
+        @include respond(mobile) {
+            display: none;
+        }
+
+        &__item {
+            background: var(--background-card-primary);
+            border-radius: 1rem;
+            display: flex;
+            padding: 1.6rem;
+            align-items: center;
+        }
+    }
+
+    &__slider {
+        display: none;
+
+        @include respond(mobile) {
+            display: flex;
+            width: calc(100% + var(--wrapper-padding-x));
+        }
+
+        &__item {
+            background: var(--background-card-primary);
+            border-radius: 1rem;
+            display: flex;
+            padding: 1.6rem;
+            align-items: center;
+        }
     }
 
     &__img {
@@ -42,6 +75,10 @@
         margin: 4rem;
         text-align: center;
         font-weight: bold;
+
+        @include respond(mobile) {
+            display: none;
+        }
     }
 
     &__link {

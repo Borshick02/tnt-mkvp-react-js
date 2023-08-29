@@ -36,6 +36,9 @@
 
     &__prev,
     &__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
     }
 }

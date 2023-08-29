@@ -1,11 +1,32 @@
-import './index.scss';
-
 import { ReactComponent as OifIcon } from '../../assets/icons/oif.svg';
 import { ReactComponent as Kis } from '../../assets/icons/kis.svg';
 import { ReactComponent as WebTutor } from '../../assets/icons/web-tutor.svg';
 import { ReactComponent as Scud } from '../../assets/icons/scud.svg';
+import { SwiperSlide } from 'swiper/react';
 
 import Grid from 'components/Grid';
+import Slider from 'components/Slider';
+
+import './index.scss';
+
+const mockItems = [
+    {
+        Icon: OifIcon,
+        name: 'ОИФ',
+    },
+    {
+        Icon: Kis,
+        name: 'КИС ЭХД',
+    },
+    {
+        Icon: WebTutor,
+        name: 'WebTutor',
+    },
+    {
+        Icon: Scud,
+        name: 'Скуд',
+    },
+];
 
 const CardServices = () => {
     return (
@@ -16,32 +37,36 @@ const CardServices = () => {
                     Смотреть все
                 </a>
             </div>
-            <Grid type="small">
-                <div className="card-services__content">
-                    <div className="card-services__icon">
-                        <OifIcon />
-                    </div>
-                    <h6 className="card-services__name">ОИФ</h6>
-                </div>
-                <div className="card-services__content">
-                    <div className="card-services__icon">
-                        <Kis />
-                    </div>
-                    <h6 className="card-services__name">КИС ЭХД</h6>
-                </div>
-                <div className="card-services__content">
-                    <div className="card-services__icon">
-                        <WebTutor />
-                    </div>
-                    <h6 className="card-services__name">WebTutor</h6>
-                </div>
-                <div className="card-services__content">
-                    <div className="card-services__icon">
-                        <Scud />
-                    </div>
-                    <h6 className="card-services__name">СЦУД</h6>
-                </div>
+            <Grid type="small" className="card-services__grid">
+                {mockItems &&
+                    mockItems.map(({ Icon, name }) => (
+                        <div className="card-services__grid__item">
+                            <div className="card-services__icon">
+                                <Icon />
+                            </div>
+                            <h6 className="card-services__name">{name}</h6>
+                        </div>
+                    ))}
             </Grid>
+            <Slider
+                slidesPerView={1.3}
+                spaceBetween={16}
+                allowTouchMove
+                navigation={false}
+                id="slider-card-services--mobile"
+                className="card-services__slider"
+            >
+                {mockItems.map(({ Icon, name }) => (
+                    <SwiperSlide>
+                        <div className="card-services__slider__item">
+                            <div className="card-services__icon">
+                                <Icon />
+                            </div>
+                            <h6 className="card-services__name">{name}</h6>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Slider>
         </div>
     );
 };

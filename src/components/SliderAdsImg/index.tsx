@@ -9,12 +9,16 @@ const SliderAdsImg = () => {
     return (
         <Slider id="slider-ads-img" className="slider-ads-img" title="Объявления">
             <SwiperSlide>
-                <img src={handsUp} alt="Hands Up!" className="slider-ads-img__img" />
-                <p className="slider-ads-img__text">Какие волонтерские проекты вам наиболее интересны?</p>
+                <div className="slider-ads-img__slide">
+                    <img src={handsUp} alt="Hands Up!" className="slider-ads-img__img" />
+                    <p className="slider-ads-img__text">Какие волонтерские проекты вам наиболее интересны?</p>
+                </div>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={handsUp} alt="Hands Up!" className="slider-ads-img__img" />
-                <p className="slider-ads-img__text">Какие волонтерские проекты вам наиболее интересны?</p>
+                <div className="slider-ads-img__slide">
+                    <img src={handsUp} alt="Hands Up!" className="slider-ads-img__img" />
+                    <p className="slider-ads-img__text">Какие волонтерские проекты вам наиболее интересны?</p>
+                </div>
             </SwiperSlide>
         </Slider>
     );
