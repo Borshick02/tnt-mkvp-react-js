@@ -6,15 +6,15 @@ import Slider from 'components/Slider';
 
 import './index.scss';
 
-const NavButtons = () => (
+const CustomNavigation = (id: string) => (
     <div className="slider-hero__counter">
-        <div className="slider__prev--slider-hero slider-hero__prev">
+        <div className={`slider__prev--${id} slider-hero__prev`}>
             <ChevronLeftIcon />
         </div>
         <div className="slider-hero__current">1</div>
         <div>/</div>
         <div className="slider-hero__total">2</div>
-        <div className="slider__next--slider-hero slider-hero__next">
+        <div className={`slider__next--${id} slider-hero__next`}>
             <ChevronRightIcon />
         </div>
     </div>
@@ -23,7 +23,7 @@ const NavButtons = () => (
 const SliderHero = () => {
     return (
         <div className="slider-hero">
-            <Slider id="slider-hero" NavButtons={NavButtons}>
+            <Slider id="slider-hero" CustomNavigation={() => CustomNavigation('slider-hero')}>
                 <SwiperSlide>
                     <div className="slider-hero__content">
                         <div className="slider-hero__left">
@@ -31,7 +31,7 @@ const SliderHero = () => {
                             <h5 className="slider-hero__title">Дан старт корпоративной эстафете в честь юбилея ПАО «Транснефть»</h5>
                         </div>
                         <div className="slider-hero__right">
-                            <img src={heroImage} alt="Hero Image" className="slider-hero__img" />
+                            <img src={heroImage} alt="Hero Slider" className="slider-hero__img" />
                         </div>
                     </div>
                 </SwiperSlide>

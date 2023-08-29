@@ -11,11 +11,11 @@ interface Props {
     children: React.ReactNode;
     id: string;
     title?: string;
-    NavButtons?: () => JSX.Element;
+    CustomNavigation?: () => JSX.Element;
     className?: string;
 }
 
-const Slider = ({ children, title, id, NavButtons, className = '' }: Props) => {
+const Slider = ({ children, title, id, CustomNavigation, className = '' }: Props) => {
     return (
         <div className={`slider ${className}`}>
             {title && (
@@ -39,8 +39,8 @@ const Slider = ({ children, title, id, NavButtons, className = '' }: Props) => {
             >
                 {children}
             </Swiper>
-            {NavButtons ? (
-                <NavButtons />
+            {CustomNavigation ? (
+                <CustomNavigation />
             ) : (
                 <div className="slider__counter">
                     <div className={`slider__prev--${id} slider__prev`}>
