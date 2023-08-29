@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Badge, DropDown } from 'tnt-uikit-reactjs/src/components';
 import { SettingsIcon, CaretDownMdIcon } from 'tnt-uikit-reactjs/src/icons';
 import avatar from '../../assets/images/avatar.png';
+import { useLocation } from 'react-router-dom';
 
 import './index.scss';
 
@@ -11,6 +12,7 @@ interface Props {
 
 const MenuUser = ({ style = {} }: Props) => {
     //const auth = useAuth();
+    const { pathname } = useLocation();
 
     return (
         <div className="menu-user" style={style}>
@@ -33,7 +35,11 @@ const MenuUser = ({ style = {} }: Props) => {
                     >
                         8
                     </Badge>
-                    <SettingsIcon />
+                    <SettingsIcon
+                        style={{
+                            color: pathname === '/info' ? 'var(--static-white)' : '',
+                        }}
+                    />
                 </div>
                 <DropDown
                     Component={({ close }) => (
@@ -48,9 +54,9 @@ const MenuUser = ({ style = {} }: Props) => {
                     Button={() => (
                         <div className="menu-user__info">
                             <img src={avatar} alt="avatar" />
-                            <span>Иван Лавров</span>
+                            <span style={{ color: pathname === '/info' ? 'var(--static-white)' : '' }}>Иван Лавров</span>
                             <div className="menu-user__info__icon">
-                                <CaretDownMdIcon />
+                                <CaretDownMdIcon style={{ color: pathname === '/info' ? 'var(--static-white)' : '' }} />
                             </div>
                         </div>
                     )}

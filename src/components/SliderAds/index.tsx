@@ -4,9 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import './index.scss';
-import 'swiper/css';
-
-import img from '../../assets/images/slider-img.png';
 
 import { ChevronLeftIcon } from 'tnt-uikit-reactjs/src/icons';
 import { ChevronRightIcon } from 'tnt-uikit-reactjs/src/icons';
