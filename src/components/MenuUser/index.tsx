@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Badge, Divider, DropDown } from 'tnt-uikit-reactjs/src/components';
 import { SettingsIcon, CaretDownMdIcon, SearchMagnifyingGlassIcon } from 'tnt-uikit-reactjs/src/icons';
 import { ReactComponent as BurgerMenuIcon } from '../../assets/icons/burger-menu.svg';
@@ -13,6 +13,8 @@ interface Props {
 }
 
 const MenuUser = ({ style = {}, className = '' }: Props) => {
+    const { pathname } = useLocation();
+
     return (
         <>
             <div className={`menu-user ${className}`} style={style}>

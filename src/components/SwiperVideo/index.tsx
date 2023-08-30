@@ -9,8 +9,8 @@ import './index.scss';
 
 import img from '../../assets/images/swiper-video.png';
 
-import { ChevronLeftIcon } from 'tnt-uikit-reactjs/src/icons';
-import { ChevronRightIcon } from 'tnt-uikit-reactjs/src/icons';
+// import { ChevronLeftIcon } from 'tnt-uikit-reactjs/src/icons';
+// import { ChevronRightIcon } from 'tnt-uikit-reactjs/src/icons';
 
 import { Navigation, Thumbs, FreeMode } from 'swiper';
 
@@ -32,34 +32,34 @@ const SwiperVideo = () => {
                         className="mySwiper2"
                     >
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide">
-                            <img className="swiper-video__img" src={img} />
+                            <img alt="" className="swiper-video__img" src={img} />
                         </SwiperSlide>
                     </Swiper>
                     <div className="swiper-video__title">Омский государственный академический театр драмы.mp4</div>
@@ -74,55 +74,55 @@ const SwiperVideo = () => {
                     >
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-video__slide-thumbs">
                             <div className="swiper-video__img-wrap">
-                                <img className="swiper-video__img-thumbs" src={img} />
+                                <img alt="" className="swiper-video__img-thumbs" src={img} />
                             </div>
                         </SwiperSlide>
-                        
+
                     </Swiper>
                 </div>
             </div>

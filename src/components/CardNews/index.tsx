@@ -62,8 +62,8 @@ const CardNews = () => {
             </div>
             <Grid className="card-news__grid" type="large">
                 {mockItems &&
-                    mockItems.map(({ image, title, text, date }) => (
-                        <Card>
+                    mockItems.map(({ image, title, text, date }, key) => (
+                        <Card key={key}>
                             <img src={image} alt={title} className="card-news__img" />
                             <h5 className="card-news__title">{title}</h5>
                             <p className="card-news__desc" onClick={handleClick}>
@@ -81,19 +81,18 @@ const CardNews = () => {
                 id="slider-card-services--mobile"
                 className="card-services__slider"
             >
-                {mockItems &&
-                    mockItems.map(({ image, title, text, date }) => (
-                        <SwiperSlide>
-                            <Card>
-                                <img src={image} alt={title} className="card-news__img" />
-                                <h5 className="card-news__title">{title}</h5>
-                                <p className="card-news__desc" onClick={handleClick}>
-                                    {text}
-                                </p>
-                                <div className="card-news__date">{date}</div>
-                            </Card>
-                        </SwiperSlide>
-                    ))}
+                {mockItems && mockItems.map(({ image, title, text, date }, key) => (
+                    <SwiperSlide key={key}>
+                        <Card>
+                            <img src={image} alt={title} className="card-news__img" />
+                            <h5 className="card-news__title">{title}</h5>
+                            <p className="card-news__desc" onClick={handleClick}>
+                                {text}
+                            </p>
+                            <div className="card-news__date">{date}</div>
+                        </Card>
+                    </SwiperSlide>
+                ))}
             </Slider>
             <a href="/" className="card-news__more">
                 Показать еще

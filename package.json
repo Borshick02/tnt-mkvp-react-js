@@ -10,7 +10,7 @@
         "@types/node": "16.18.39",
         "@types/react": "18.2.18",
         "@types/react-dom": "18.2.7",
-        "@types/swiper": "^6.0.0",
+        "@types/swiper": "6.0.0",
         "apexcharts": "3.41.1",
         "axios": "1.4.0",
         "jquery": "3.7.0",
@@ -24,7 +24,7 @@
         "react-scripts": "5.0.1",
         "react-svg": "^16.1.22",
         "sass": "1.64.2",
-        "swiper": "^9.4.1",
+        "swiper": "9.4.1",
         "tnt-uikit-reactjs": "github:valery-lavrik/tnt-uikit-reactjs",
         "typescript": "4.9.5",
         "web-vitals": "2.1.4"
@@ -37,26 +37,14 @@
         "kit-update": "rm -rf node_modules/tnt-uikit-reactjs/ && rm package-lock.json && npm i"
     },
     "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest",
-            "prettier"
-        ],
+        "extends": ["react-app", "react-app/jest", "prettier"],
         "rules": {
             "react-hooks/exhaustive-deps": 0
         }
     },
     "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+        "production": [">0.2%", "not dead", "not op_mini all"],
+        "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
     },
     "devDependencies": {
         "@craco/craco": "^7.1.0",

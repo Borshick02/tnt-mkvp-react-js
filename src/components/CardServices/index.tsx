@@ -38,15 +38,14 @@ const CardServices = () => {
                 </a>
             </div>
             <Grid type="small" className="card-services__grid">
-                {mockItems &&
-                    mockItems.map(({ Icon, name }) => (
-                        <div className="card-services__grid__item">
-                            <div className="card-services__icon">
-                                <Icon />
-                            </div>
-                            <h6 className="card-services__name">{name}</h6>
+                {mockItems && mockItems.map(({ Icon, name }, key) => (
+                    <div className="card-services__grid__item" key={key}>
+                        <div className="card-services__icon">
+                            <Icon />
                         </div>
-                    ))}
+                        <h6 className="card-services__name">{name}</h6>
+                    </div>
+                ))}
             </Grid>
             <Slider
                 slidesPerView={1.3}
@@ -56,8 +55,8 @@ const CardServices = () => {
                 id="slider-card-services--mobile"
                 className="card-services__slider"
             >
-                {mockItems.map(({ Icon, name }) => (
-                    <SwiperSlide>
+                {mockItems.map(({ Icon, name }, key) => (
+                    <SwiperSlide key={key}>
                         <div className="card-services__slider__item">
                             <div className="card-services__icon">
                                 <Icon />
